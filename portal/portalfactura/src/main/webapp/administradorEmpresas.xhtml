@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ice="http://www.icesoft.com/icefaces/component"
+        >
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="pageContent">
+                <f:metadata>
+                    <f:event type="preRenderView" listener="#{login.checkAdministradorSistemaLogin}"/>
+                </f:metadata>
+
+                <ice:outputText styleClass="infoTitle">Empresas Registradas</ice:outputText>
+                <ice:panelGrid  columns="2" columnClasses="frmCol,lstCol">
+
+                    <ice:form>
+
+
+
+                        <ice:panelGrid columns="2">
+
+                            <ice:outputLabel>RUC:</ice:outputLabel>
+                            <ice:inputText readonly="#{administradorEmpresasBean.entidadRegistrada}" value="#{administradorEmpresasBean.model.empCodigo}" maxlength="13" size="30" />
+                            <ice:outputLabel>Razón Social:</ice:outputLabel>
+                            <ice:inputText value="#{administradorEmpresasBean.model.empRazonSocial}" size="30" />
+                            <ice:outputLabel>Mail:</ice:outputLabel>
+                            <ice:inputText value="#{administradorEmpresasBean.model.empMail}" size="30" />
+                            <ice:outputLabel>Telefono:</ice:outputLabel>
+                            <ice:inputText value="#{administradorEmpresasBean.model.empTelefono}" size="30" />
+                            <ice:outputLabel>Dirección:</ice:outputLabel>
+                            <ice:inputText value="#{administradorEmpresasBean.model.empDireccion}" size="30" />
+                            <ice:outputLabel>URL:</ice:outputLabel>
+                            <ice:inputText value="#{administradorEmpresasBean.model.empUrl}" size="30" />
+
+                            <ice:panelGrid columns="2">
+                                <ice:commandButton image="#{resource['images:nuevo-24.png']}" value="Nuevo" actionListener="#{administradorEmpresasBean.nuevo}" />
+                                <ice:commandButton image="#{resource['images:save-32.png']}" value="Guardar" actionListener="#{administradorEmpresasBean.guardar}" />
+                            </ice:panelGrid>
+                        </ice:panelGrid>
+
+
+                    </ice:form>
+
+                    <ice:panelGrid>
+                        <ice:form>
+                            <ice:dataTable value="#{administradorEmpresasBean.listaEmpresas}" var="u" id="tablaEmpresas" rows="10"> 
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel>RUC</ice:outputLabel>
+                                    </f:facet>
+                                    <ice:outputText value="#{u.empCodigo}" />
+                                </ice:column>
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel>Razón Social</ice:outputLabel>
+                                    </f:facet>
+                                    <ice:outputText value="#{u.empRazonSocial}" />
+                                </ice:column>
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel>URL</ice:outputLabel>
+                                    </f:facet>
+                                    <ice:outputText value="#{u.empUrl}" />
+                                </ice:column>
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel></ice:outputLabel>
+                                    </f:facet>
+                                    <ice:commandButton  image="#{resource['images:edit-16.png']}" value="Editar" actionListener="#{administradorEmpresasBean.editar}">
+                                        <f:attribute name="codigo" value="#{u.empCodigo}" />
+                                    </ice:commandButton>                       
+                                </ice:column>
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel></ice:outputLabel>
+                                    </f:facet>
+                                    <ice:commandButton image="#{resource['images:delete-16.png']}" value="Eliminar" actionListener="#{administradorEmpresasBean.eliminar}">
+                                        <f:attribute name="codigo" value="#{u.empCodigo}" />
+                                    </ice:commandButton>                            
+                                </ice:column>
+
+                                <ice:panelConfirmation> 
+                                </ice:panelConfirmation>
+
+                            </ice:dataTable>
+                            <ice:dataPaginator id="dataScroll_2" for="tablaEmpresas"
+                                               rowsCountVar="rowsCount"
+                                               displayedRowsCountVar="displayedRowsCount"
+                                               firstRowIndexVar="firstRowIndex"
+                                               lastRowIndexVar="lastRowIndex"
+                                               pageCountVar="pageCount"
+                                               pageIndexVar="pageIndex">
+                                <ice:outputFormat
+                                    styleClass="standard"
+                                    value="{0} empresas registradas, mostrados {1} empresa(s), de {2} a {3}. Página {4} / {5}.">
+                                    <f:param value="#{rowsCount}"/>
+                                    <f:param value="#{displayedRowsCount}"/>
+                                    <f:param value="#{firstRowIndex}"/>
+                                    <f:param value="#{lastRowIndex}"/>
+                                    <f:param value="#{pageIndex}"/>
+                                    <f:param value="#{pageCount}"/>
+                                </ice:outputFormat>
+                            </ice:dataPaginator>
+                            <ice:dataPaginator id="dataScroll_3"
+                                               for="tablaEmpresas"
+                                               paginator="true"
+                                               fastStep="3"
+                                               paginatorMaxPages="4">
+                                <f:facet name="first">
+                                    <ice:graphicImage
+                                        url="./xmlhttp/css/xp/css-images/arrow-first.gif"
+                                        style="border:none;"
+                                        title="First Page"/>
+                                </f:facet>
+                                <f:facet name="last">
+                                    <ice:graphicImage
+                                        url="./xmlhttp/css/xp/css-images/arrow-last.gif"
+                                        style="border:none;"
+                                        title="Last Page"/>
+                                </f:facet>
+                                <f:facet name="previous">
+                                    <ice:graphicImage
+                                        url="./xmlhttp/css/xp/css-images/arrow-previous.gif"
+                                        style="border:none;"
+                                        title="Previous Page"/>
+                                </f:facet>
+                                <f:facet name="next">
+                                    <ice:graphicImage
+                                        url="./xmlhttp/css/xp/css-images/arrow-next.gif"
+                                        style="border:none;"
+                                        title="Next Page"/>
+                                </f:facet>
+                                <f:facet name="fastforward">
+                                    <ice:graphicImage url="./xmlhttp/css/xp/css-images/arrow-ff.gif"
+                                                      style="border:none;"
+                                                      title="Fast Forward"/>
+                                </f:facet>
+                                <f:facet name="fastrewind">
+                                    <ice:graphicImage url="./xmlhttp/css/xp/css-images/arrow-fr.gif"
+                                                      style="border:none;"
+                                                      title="Fast Backwards"/>
+                                </f:facet>
+                            </ice:dataPaginator>
+                        </ice:form>
+                    </ice:panelGrid>
+
+                </ice:panelGrid>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

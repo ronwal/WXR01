@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:ice="http://www.icesoft.com/icefaces/component"
+      xmlns:f="http://java.sun.com/jsf/core" 
+      xmlns:ace="http://www.icefaces.org/icefaces/components"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="pageContent">
+
+                <ice:form>
+                    <ice:panelGrid columns="8" cellpadding="0" cellspacing="0" style="text-align: right">
+
+                        <ice:outputLabel>Tipo:</ice:outputLabel>
+                        <ice:selectOneRadio value="#{administradorDocumentosBean.tipo}" immediate="true" partialSubmit="true" layout="lineDirection"> 
+                            <f:selectItem itemValue="#{0}" itemLabel="Todos" />
+                            <f:selectItem itemValue="#{1}" itemLabel="Enviados" />
+                            <f:selectItem itemValue="#{2}" itemLabel="Recibidos" />
+                        </ice:selectOneRadio>
+
+
+                        <ice:outputLabel style="margin-right: 10px"/>
+
+
+                        <ice:outputLabel>Desde:</ice:outputLabel>
+                        <ice:selectInputDate value="#{administradorDocumentosBean.desde}" renderAsPopup="true">
+                            <f:convertDateTime pattern="yyyy/MM/dd" timeZone="#{administradorDocumentosBean.timezone}" />
+                        </ice:selectInputDate>
+
+                        <ice:outputLabel style="margin-right: 10px"/>
+
+
+                        <ice:outputLabel>Límite:</ice:outputLabel>
+                        <ice:inputText value="#{administradorDocumentosBean.limit}" size="5" />
+
+
+                        <ice:outputLabel>RUC/Razón Social:</ice:outputLabel>
+                        <ice:inputText value="#{administradorDocumentosBean.filtro}" size="35" />
+
+                        <ice:outputLabel style="margin-right: 10px"/>
+
+                        <ice:outputLabel>Hasta:</ice:outputLabel>
+                        <ice:selectInputDate value="#{administradorDocumentosBean.hasta}" renderAsPopup="true">
+                            <f:convertDateTime pattern="yyyy/MM/dd" timeZone="#{administradorDocumentosBean.timezone}" />
+                        </ice:selectInputDate>
+
+                        <ice:outputLabel />
+                        <ice:outputLabel />
+                        <ice:outputLabel />
+
+                        <ice:outputLabel>Secuencial:</ice:outputLabel>
+                        <ice:inputText value="#{administradorDocumentosBean.secuencial}"  size="35" />
+                        <ice:outputLabel />
+                        <ice:outputLabel />
+
+                        <ice:commandButton value="Actualizar" actionListener="#{administradorDocumentosBean.actualizar}" />
+                    </ice:panelGrid>
+
+                </ice:form>
+
+
+                <ice:form>
+                    <ice:panelGrid width="100%" columns="5" cellpadding="10" cellspacing="10" style="border-bottom: solid silver 1px;">
+                        <ice:outputLink value="facturas.jsf">Facturas</ice:outputLink>
+                        <ice:outputLink value="comprobantesRetencion.jsf"><b>Comprobantes de Retención</b></ice:outputLink>
+                        <ice:outputLink value="notasCredito.jsf">Notas de Crédito</ice:outputLink>
+                        <ice:outputLink value="notasDebito.jsf">Notas de Débito</ice:outputLink>
+                        <ice:outputLink value="guiasRemision.jsf">Guías de Remisión</ice:outputLink>
+                    </ice:panelGrid>
+                </ice:form>
+
+                <ice:form id="frmRetencionesTable">
+
+                    <ace:dataTable value="#{administradorDocumentosBean.retenciones}"  id="tablaRetenciones" var="d" rows="20" style="font-size: 11px;" height="700" scrollable="true" paginator="true">
+                        <ace:column style="margin: 1px;padding: 1px; white-space: nowrap;" >
+                            <ice:commandButton style="margin: 1px;padding: 1px; white-space: nowrap;" image="#{resource['images:download.png']}" title="Descargar" actionListener="#{administradorDocumentosBean.descargar}">
+                                <f:attribute name="tipo" value="R" />
+                                <f:attribute name="codigo" value="#{d.retCodigo}" />
+                            </ice:commandButton>
+                        </ace:column>
+                        <ace:column style="margin: 1px;padding: 1px; white-space: nowrap;" >
+                            <ice:commandButton style="margin: 1px;padding: 1px; white-space: nowrap;" image="#{resource['images:send.png']}" title="Enviar por email" onclick="document.getElementById('frmRetencionesTable:retKey').readOnly = false;
+                                    document.getElementById('frmRetencionesTable:retKey').value = '#{d.retCodigo}';
+                                    document.getElementById('frmRetencionesTable:retKey').readOnly = true;
+                                    sendMailDialog.show();">
+                            </ice:commandButton>
+                        </ace:column>
+                        <ace:column style="margin: 1px;padding: 1px; white-space: nowrap;" >
+                            <ice:commandButton style="margin: 1px;padding: 1px; white-space: nowrap;" image="#{resource['images:pdf.png']}" title="Ver" actionListener="#{administradorDocumentosBean.reportePdf}" >
+                                <f:attribute name="tipo" value="R" />
+                                <f:attribute name="codigo" value="#{d.retCodigo}" />
+                            </ice:commandButton>
+                        </ace:column>
+                        <ace:column style="margin: 1px;padding: 1px; white-space: nowrap;" headerText="Tipo" >
+                            <h:outputText style="margin: 1px;padding: 1px; white-space: nowrap;" value="#{d.tipo.tipCodigo}"/>
+                        </ace:column>
+                        <!--<ace:column style="margin: 1px;padding: 1px; white-space: nowrap;" headerText="RUC">
+                            <h:outputText style="margin: 1px;padding: 1px; white-space: nowrap;" value="#{d.retIdentificacionEmisor}"/>
+                        </ace:column>
+                        <ace:column style="margin: 1px;padding: 1px; white-space: nowrap;" headerText="Agente Retencion">
+                            <h:outputText style="margin: 1px;padding: 1px; white-space: nowrap; " value="#{d.retRazonSocialEmisor}"/>
+                        </ace:column>-->
+                        <ace:column style="margin: 1px;padding: 1px; white-space: nowrap;" headerText="RUC">
+                            <h:outputText style="margin: 1px;padding: 1px; white-space: nowrap;" value="#{d.retIdentificacionRetenido}"/>
+                        </ace:column>
+                        <ace:column style="margin: 1px;padding: 1px; white-space: nowrap;" headerText="Contribuyente">
+                            <h:outputText style="margin: 1px;padding: 1px; white-space: nowrap;" value="#{d.retRazonSocialRetenido}"/>
+                        </ace:column>
+                        <ace:column style="margin: 1px;padding: 1px; white-space: nowrap;" headerText="Fecha">
+                            <h:outputText value="#{d.retFechaEmision}"/>
+                        </ace:column>
+                        <ace:column style="margin: 1px;padding: 1px; white-space: nowrap;" headerText="Documento">
+                            <h:outputText style="margin: 1px;padding: 1px; white-space: nowrap;" value="#{d.retEstablecimiento}-#{d.retPuntoEmision}-#{d.retSecuencial}"/>
+                        </ace:column>
+                        <ace:column style="padding: 0px; margin: 0px; text-align: right;" headerText="Valor">
+                            <h:outputText style="padding: 0px; margin: 0px;text-align: right;"  value="#{d.retValorRetenido}"/>
+                        </ace:column>
+                        <ace:column style="padding: 0px; margin: 0px; width: 40px" headerText="Num.Aut" >
+                            <h:outputText style="margin: 1px;padding: 1px; white-space: nowrap;" value="#{d.retNumAutorizacion}"/>
+                        </ace:column>
+                        
+                        
+                    </ace:dataTable>
+
+                    <ace:dialog id="dialog"
+                                header="Envío"
+                                widgetVar="sendMailDialog"
+                                draggable="true"
+                                modal="true">
+                        <ice:inputText id="retKey" value="#{sendByMailBean.key}" style="font-size: 1px;" size="0"  />
+                        <ice:panelGrid columns="2">  
+                            <ice:outputLabel>Destinatario:</ice:outputLabel> 
+                            <ice:inputText value="#{sendByMailBean.dest}" size="30" style="font-size: 11px;" />
+                            <ice:outputLabel>CC:</ice:outputLabel> 
+                            <ice:inputText value="#{sendByMailBean.cc}" size="30" style="font-size: 11px;"/>
+                            <ice:outputLabel />
+                            <ice:commandButton image="#{resource['images:send.png']}" title="Enviar" actionListener="#{sendByMailBean.send}" onclick="sendMailDialog.hide();">
+                                <f:attribute name="tipo" value="R" />
+                                <f:attribute name="key" value="#{d.retCodigo}" />
+                            </ice:commandButton>
+                        </ice:panelGrid>
+
+                    </ace:dialog>
+                    
+                    <ice:panelGrid width="100%" style="text-align: right" columns="2">
+                        <ice:panelGrid width="500px" />
+                        <ice:panelGrid columns="2">
+                            <ace:dataExporter type="csv" label="Exportar CSV" target="tablaRetenciones" fileName="export" excludeColumns="0,1,2" style="font-size: 10px;" />
+                            <ace:dataExporter type="pdf" label="Exportar PDF" target="tablaRetenciones" fileName="export" excludeColumns="0,1,2"  style="font-size: 10px;"  />
+                        </ice:panelGrid>
+                    </ice:panelGrid>
+
+                </ice:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

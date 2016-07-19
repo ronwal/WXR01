@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:ice="http://www.icesoft.com/icefaces/component"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ace="http://www.icefaces.org/icefaces/components"
+        >
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <ice:outputStyle  href="/xmlhttp/css/rime/rime.css"/>
+        <link rel="stylesheet" type="text/css" href="default.css?time=rand2" media="screen" />
+
+
+    </h:head>
+
+    <h:body>
+        <div class="pageContainer">
+            <div class="header">
+                <table width="100%" border="0" >
+                    <tr>
+
+                        <td style="font-size: 27px;font-weight: bold;" align="center">
+                            <table width="100%">
+                                <tr>
+                                    <td><img src="resources/images/facturaEcuador.png" /></td>
+                                    <td></td>
+                                    <td width="320px" >
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+            <ice:form>
+                <ace:dialog header="Mensaje"
+                            widgetVar="messageDialog"
+                            draggable="false"
+                            modal="true">
+                    <ice:panelGrid style="height: 60px;text-align: center;" width="100%" >
+                        <ice:messages errorStyle="color:red;font-weight:bold;background:white;" infoStyle="color:black;font-weight:bold;background:white;" warnStyle="color:orange;font-weight:bold;background:white;" />
+                        <ice:commandButton value="Cerrar" onclick="messageDialog.hide();" />
+                    </ice:panelGrid>
+                </ace:dialog>
+            </ice:form>
+            <div class="rootMenu">
+                <ice:form style="margin-top: 5px;">
+                    <ice:panelGrid columns="12" cellpadding="0" cellspacing="0" >
+                        <ice:outputLink value="index.jsf" styleClass="rootMenuItem">Inicio</ice:outputLink>
+                        <ice:outputLink value="quienes.jsf" styleClass="rootMenuItem">Quienes Somos</ice:outputLink>
+                        <ice:outputLink value="factura.jsf" styleClass="rootMenuItem">Factura Electrónica</ice:outputLink>
+                        <ice:outputLink value="productos.jsf" styleClass="rootMenuItem">Productos y Servicios</ice:outputLink>
+                        <ice:outputLink value="contactos.jsf" styleClass="rootMenuItem">Contactos</ice:outputLink>
+                    </ice:panelGrid>
+                </ice:form>
+            </div>
+
+            <div align="center" class="content">
+                <ice:form> 
+                    <ice:panelGrid columns="2">
+                        <ice:panelGrid>
+                            <h:graphicImage library="images" name="keys-128.png" width="128" height="128" />
+                        </ice:panelGrid>
+                        <ice:panelGrid >
+                            <ice:outputLabel>Usuario:</ice:outputLabel>
+                            <ice:inputText value="#{login.nick}" actionListener="#{login.conectar}" />
+                            <ice:outputLabel>Contraseña:</ice:outputLabel>
+                            <ice:inputSecret value="#{login.clave}" actionListener="#{login.conectar}" />
+                            <ice:outputLabel>Imagen para validación:</ice:outputLabel>
+                            <ice:commandButton image="#{login.captchaUrl}" style="width: 150px;height: 60px;">
+                                <ace:ajax event="click" execute="@this" render="@this" listener="#{login.captchaListener}"/>
+                            </ice:commandButton>
+
+                            <ice:outputLabel style="font-size: 12px;" >Texto de Validación:</ice:outputLabel>
+                            <ice:inputText value="#{login.captcha}" actionListener="#{login.conectar}" />  
+
+                            <ice:outputLabel />
+                            <ice:commandLink value="Ingresar" style="font-family: 'Audiowide', cursive;font-size: 20px" actionListener="#{login.conectar}" />
+
+                        </ice:panelGrid>
+                    </ice:panelGrid>
+                </ice:form>
+
+
+            </div>
+
+            <div align="center" class="footer">
+                <ui:include src="pie.xhtml" />
+            </div>
+            <div align="center">Todos los derechos reservados</div>
+        </div>
+
+
+
+    </h:body>
+
+</html>

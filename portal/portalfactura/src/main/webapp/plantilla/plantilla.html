@@ -1,0 +1,73 @@
+<html>
+    <body style="font-family: Verdana;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+                <tr>
+                    <td valign="middle" width="128" >
+                        ${logo}
+                    </td>
+                    <td valign="middle" colspan="2">
+                        <div align="center">
+                            <div style="font-size: 40px; font-weight: bold;" align="center">
+                                <span style="border-top: 2px solid #FF6908; border-bottom: 2px solid #FF6908; padding-bottom: 0px;color:#022338;">
+                                    ${emisor}
+                                </span>
+                            </div>
+                            <div style="font-size: 17px; font-style: italic; padding-top: 5px;" align="center">
+                                <span style="border-bottom: 1px dotted green;">
+                                    Envío de Documento Electrónico <span style="font-weight: bold;">on-line</span>
+                                </span>
+                            </div>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="3" bgcolor="black" height="1"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        <div style="font-family: Arial; margin: 5px; border: 1px solid silver; padding: 10px;">
+                            <p style="text-align: right">${fechaActual}<br>${hora}</p>
+                            <p>Estimado/a:</p>
+                            <p><b>${destinatario}</b></p>
+
+                            <p align="justify">
+                                Por medio de la presente, <b>Factura Ecuador</b>,
+                                le notifica el envío de un documento electrónico on-line desde nuestro portal, de igual forma le invita a que sea parte de www.facturaecuador.com
+                            </p>
+                            <p align="justify">
+                                ${detalle}
+                            </p>
+
+                            <p><b>Fecha:</b> ${fecha}</p>
+                            <p><b>Documento:</b> ${documento}</p>
+
+                            <p><b><i>Adjunto archivo xml y archivo RIDE</i></b></p>
+
+
+                            <p>Esta es solo una notificación.</p>
+                            <p>Si tiene cualquier inquietud o inconveniente por favor no dude en contactarse con nosotros.</p>
+
+                            ${emisor}<br />
+                            ${datosEmpresa}<br /><br />
+
+                            <br /><br /><br /><br />
+                            ${logoFactura}<br />
+                            FACTURA ECUADOR<br />
+                            Su portal de documentos electrónicos<br />
+                            <a href="http://www.facturaecuador.com">http://www.facturaecuador.com</a>.<br />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" bgcolor="black" height="1"></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </body>
+</html>

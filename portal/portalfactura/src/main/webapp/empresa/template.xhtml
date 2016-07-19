@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:ice="http://www.icesoft.com/icefaces/component"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ace="http://www.icefaces.org/icefaces/components"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <ice:outputStyle  href="/xmlhttp/css/rime/rime.css"/>
+        <link rel="stylesheet" type="text/css" href="default.css?time=rand2" media="screen" />
+
+        <f:metadata>
+            <f:event type="preRenderView" listener="#{login.checkLoginEmpresa}"/>
+        </f:metadata>
+    </h:head>
+
+
+
+    <h:body>
+        <div class="pageContainer">
+            <div class="header">
+                <table width="100%" border="0" >
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td style="font-size: 27px;font-weight: bold;" align="center">
+                            <table width="100%">
+                                <tr> 
+                                    <td><ice:graphicImage url="#{login.empresaTrabajo.empCodigo}.logo" style="width: 128px;height: 128px;" /></td>
+                                    <td>
+                                        <ice:panelGrid>
+                                            <ice:outputLabel rendered="#{login.empresaDefinida}" style="font-size: 14px;font-weight: bold;" value="#{login.empresaTrabajo.empRazonSocial}"></ice:outputLabel>
+                                            <ice:outputLabel rendered="#{login.empresaDefinida}" style="font-size: 11px;font-weight: plain;" value="Email: #{login.empresaTrabajo.empMail}"></ice:outputLabel>
+                                            <ice:outputLabel rendered="#{login.empresaDefinida}" style="font-size: 11px;font-weight: plain;" value="Teléfono: #{login.empresaTrabajo.empTelefono}"></ice:outputLabel>
+                                            <ice:outputLabel rendered="#{login.empresaDefinida}" style="font-size: 10px;font-weight: plain;" value="Dirección: #{login.empresaTrabajo.empDireccion}"></ice:outputLabel>
+                                        </ice:panelGrid>
+                                    </td>
+                                    <td></td>
+                                    <td width="320px" class="loginForm">
+                                        <ice:form>
+                                            <ice:panelGrid>
+                                                <ice:outputLabel>Usuario:</ice:outputLabel>
+                                                <ice:outputLabel value="#{login.usuario.usuNombre}" style="color:black;font-weight: bold;"></ice:outputLabel>
+                                                <ice:outputLabel>Perfil:</ice:outputLabel>
+                                                <ice:outputLabel value="#{login.perfil.prfNombre}" style="color:black;font-weight: bold;" />
+                                                <ice:outputLabel>Empresa:</ice:outputLabel>
+                                                <ice:outputLabel value="#{login.usuario.empresa.empRazonSocial}" style="color:black;font-weight: bold;" />
+                                                <ice:commandLink value="Salir" style="font-family: 'Audiowide', cursive;" actionListener="#{login.desconectar}" />
+                                            </ice:panelGrid>
+                                        </ice:form>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+            <ice:form>
+                <ace:dialog header="Mensaje"
+                            widgetVar="messageDialog"
+                            draggable="false" onHide="location.reload(true);"
+                            modal="true">
+                    <ice:panelGrid style="height: 60px;text-align: center;" width="100%" >
+                        <ice:messages errorStyle="color:red;font-weight:bold;background:white;" infoStyle="color:black;font-weight:bold;background:white;" warnStyle="color:orange;font-weight:bold;background:white;" />
+                        <ice:commandButton value="Cerrar" onclick="messageDialog.hide();" />
+                    </ice:panelGrid>
+                </ace:dialog>
+            </ice:form>
+            <div class="rootMenu">
+                <ice:form style="margin-top: 5px;">
+                    <ice:panelGrid columns="12" cellpadding="0" cellspacing="0" >
+                        <ice:outputLink value="index.jsf" styleClass="rootMenuItem">Inicio</ice:outputLink>
+                        <ice:outputLink value="adminUsuarios.jsf" rendered="#{login.administradorEmpresa}" styleClass="rootMenuItem">Usuarios</ice:outputLink>
+                        <ice:outputLink value="cargaDocumento.jsf" rendered="#{login.administradorEmpresa or login.consultorInterno or login.gerenteEmpresa }" styleClass="rootMenuItem">Carga</ice:outputLink>
+                        <ice:outputLink value="adminDocumentos.jsf" rendered="#{login.administradorEmpresa or login.consultorInterno or login.gerenteEmpresa }" styleClass="rootMenuItem">Documentos</ice:outputLink>
+                        <ice:outputLink value="adminEstadisticas.jsf" rendered="#{login.administradorEmpresa or login.gerenteEmpresa}" styleClass="rootMenuItem">Estadísticas</ice:outputLink>
+                        <ice:outputLink value="cliDocumentos.jsf" rendered="#{login.clienteProveedor}" styleClass="rootMenuItem">Documentos</ice:outputLink>
+                    </ice:panelGrid>
+                </ice:form>
+            </div>
+
+            <div align="center" class="content">
+
+
+                <ice:form>
+                    <ice:panelPopup rendered="#{login.cambioClave}" modal="true" >
+                        <f:facet name="header">
+                            Cambio de Clave
+                        </f:facet>
+                        <f:facet name="body">
+                            <ice:panelGrid>
+                                <ice:outputLabel>Clave Actual:</ice:outputLabel>
+                                <ice:inputSecret value="#{login.clave}" />
+                                <ice:outputLabel>Nueva Clave:</ice:outputLabel>
+                                <ice:inputSecret value="#{login.nuevaClave}" />
+                                <ice:outputLabel>Confirmación de Clave:</ice:outputLabel>
+                                <ice:inputSecret value="#{login.confirmacionClave}" />
+                                <ice:panelGrid columns="2">
+                                    <ice:commandButton value="Cambiar" actionListener="#{login.cambiarClave}" />
+                                    <ice:commandButton value="Cancelar" actionListener="#{login.cancelarCambioClave}" />
+                                </ice:panelGrid>
+                            </ice:panelGrid>
+                        </f:facet>
+                    </ice:panelPopup>
+                </ice:form>
+
+                <ui:insert name="pageContent">Content</ui:insert>
+            </div>
+
+            <div align="center" class="footer">
+                <div style="margin-top:10px;text-align: center;font-size: 11px;color:#3f3f3f;">Con soporte de:</div>
+                <table width="350px" border="0" style="border-collapse: collapse;">
+                    <tr>
+
+                        <td align="center" valign="bottom"><img src="../resources/images/postgresql-logo.png" height="24px" /></td>
+                        <td align="center" valign="bottom"><img src="../resources/images/java-logo.png" height="24px" /></td>
+                        <td align="center" valign="bottom"><img src="../resources/images/icefaces-logo.png" height="24px" /></td>
+                        <td align="center" valign="bottom"><img src="../resources/images/jasper-reports-logo.png" height="24px" /></td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="top" style="font-size: 10px;color:#3f3f3f;">PostgreSQL</td>
+                        <td align="center" valign="top" style="font-size: 10px;color:#3f3f3f;">Java</td>
+                        <td align="center" valign="top" style="font-size: 10px;color:#3f3f3f;">ICE Faces</td>
+                        <td align="center" valign="top" style="font-size: 10px;color:#3f3f3f;">Jasper Reports</td>
+                    </tr>
+                </table>
+            </div>
+            <div align="center">Todos los derechos reservados</div>
+        </div>
+
+
+
+    </h:body>
+
+</html>

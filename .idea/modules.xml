@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/portal/XMLExplore/XMLExplore.iml" filepath="$PROJECT_DIR$/portal/XMLExplore/XMLExplore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/config-fe/config-fe.iml" filepath="$PROJECT_DIR$/common/config-fe/config-fe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/facturaecuador.iml" filepath="$PROJECT_DIR$/facturaecuador.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/persistence-fe/persistence-fe.iml" filepath="$PROJECT_DIR$/common/persistence-fe/persistence-fe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/portal/portal.iml" filepath="$PROJECT_DIR$/portal/portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/portal/portalfactura/portalfactura.iml" filepath="$PROJECT_DIR$/portal/portalfactura/portalfactura.iml" />
+    </modules>
+  </component>
+</project>

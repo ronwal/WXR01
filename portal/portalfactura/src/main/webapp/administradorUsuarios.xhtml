@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ice="http://www.icesoft.com/icefaces/component"
+      xmlns:ace="http://www.icefaces.org/icefaces/components"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="pageContent">
+                <f:metadata>
+                    <f:event type="preRenderView" listener="#{login.checkAdministradorSistemaLogin}"/>
+                </f:metadata>
+
+                <ice:outputText styleClass="infoTitle">Usuarios Registrados</ice:outputText>
+                <ice:panelGrid  >
+
+                    <ice:form>
+
+
+
+                        <ice:panelGrid columns="2">
+
+                            <ice:outputLabel>Perfil</ice:outputLabel>
+                            <ice:selectOneMenu value="#{administradorUsuariosBean.model.perfil.prfCodigo}" immediate="true" partialSubmit="true">
+                                <f:selectItems value="#{administradorUsuariosBean.listaPerfiles}" />
+                            </ice:selectOneMenu>
+
+                            <ice:outputLabel rendered="#{not administradorUsuariosBean.administradorSistema}">Empresa:</ice:outputLabel>
+                            <ice:selectOneMenu rendered="#{not administradorUsuariosBean.administradorSistema}" value="#{administradorUsuariosBean.model.empresa.empCodigo}">
+                                <f:selectItems value="#{administradorUsuariosBean.listaEmpresas}" />
+                            </ice:selectOneMenu>
+
+
+                            <ice:outputLabel>Cédula:</ice:outputLabel>
+                            <ice:inputText value="#{administradorUsuariosBean.model.usuIdentificacion}" maxlength="#{administradorUsuariosBean.maxLongitudCodigo}" size="30" />
+                            <ice:outputLabel>Nombre:</ice:outputLabel>
+                            <ice:inputText value="#{administradorUsuariosBean.model.usuNombre}" size="30" />
+                            <ice:outputLabel>Mail:</ice:outputLabel>
+                            <ice:inputText value="#{administradorUsuariosBean.model.usuMail}" size="30" />
+                            <ice:outputLabel>Nick:</ice:outputLabel>
+                            <ice:inputText value="#{administradorUsuariosBean.model.usuNick}" size="30" />
+                            <ice:selectBooleanCheckbox value="#{administradorUsuariosBean.model.usuActivo}" id="chkModel" />
+                            <ice:outputLabel for="chkModel">Activo</ice:outputLabel>
+                            <ice:selectBooleanCheckbox value="#{administradorUsuariosBean.cambiarClave}" id="chkChange" rendered="#{administradorUsuariosBean.cargadorDatos}" immediate="true" partialSubmit="true" />
+                            <ice:outputLabel rendered="#{administradorUsuariosBean.cargadorDatos}" for="chkChange">Cambiar Clave de Acceso</ice:outputLabel>
+                            <ice:outputLabel rendered="#{administradorUsuariosBean.cambiarClave}">Clave:</ice:outputLabel>
+                            <ice:inputSecret rendered="#{administradorUsuariosBean.cambiarClave}" value="#{administradorUsuariosBean.model.usuClave}" size="30" />
+                            <ice:panelGrid columns="2">
+                                <ice:commandButton image="#{resource['images:nuevo-24.png']}" value="Nuevo" actionListener="#{administradorUsuariosBean.nuevo}" />
+                                <ice:commandButton image="#{resource['images:save-32.png']}" value="Guardar" actionListener="#{administradorUsuariosBean.guardar}" />
+                            </ice:panelGrid>
+                        </ice:panelGrid>
+
+
+                    </ice:form>
+
+                    <ice:panelGrid>
+                        <ice:form>
+                            <ice:dataTable value="#{administradorUsuariosBean.listaUsuarios}" var="u" id="tablaUsuarios" rows="10"> 
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel>Cédula</ice:outputLabel>
+                                    </f:facet>
+                                    <ice:outputText value="#{u.usuIdentificacion}" />
+                                </ice:column>
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel>Nombre</ice:outputLabel>
+                                    </f:facet>
+                                    <ice:outputText value="#{u.usuNombre}" />
+                                </ice:column>
+                                
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel>Nick</ice:outputLabel>
+                                    </f:facet>
+                                    <ice:outputText value="#{u.usuNick}" />
+                                </ice:column>
+                                
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel>Empresa</ice:outputLabel>
+                                    </f:facet>
+                                    <ice:outputText value="#{u.empresa.empRazonSocial}" />
+                                </ice:column>
+
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel>Perfil</ice:outputLabel>
+                                    </f:facet>
+                                    <ice:outputText value="#{u.perfil.prfNombre}" />
+                                </ice:column>
+
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel>Activo</ice:outputLabel>
+                                    </f:facet>
+                                    <ice:outputText value="#{u.usuActivo?'SI':'NO'}" />
+
+                                </ice:column>
+
+
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel></ice:outputLabel>
+                                    </f:facet>
+                                    <ice:commandButton  image="#{resource['images:edit-16.png']}" value="Editar" actionListener="#{administradorUsuariosBean.editar}">
+                                        <f:attribute name="usuCodigo" value="#{u.usuCodigo}" />
+                                    </ice:commandButton>                       
+                                </ice:column>
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel></ice:outputLabel>
+                                    </f:facet>
+
+                                    <ice:commandButton image="#{resource['images:delete-16.png']}" value="Eliminar" onclick="confd#{u.usuCodigo}.show();"  />
+                                    <ace:confirmationDialog widgetVar="confd#{u.usuCodigo}" modal="true"
+                                                            header="Borrar Usuario" message="¿Está seguro de eliminar?"
+                                                            width="300" height="150" closable="true" closeOnEscape="true">
+                                        <ice:commandButton value="Sí" actionListener="#{administradorUsuariosBean.eliminar}" onclick="confd#{u.usuCodigo}.hide();">
+                                            <f:attribute name="usuCodigo" value="#{u.usuCodigo}" />
+                                        </ice:commandButton>
+                                        <h:commandButton value="No" onclick="confd#{u.usuCodigo}.hide();" />
+                                    </ace:confirmationDialog>
+
+
+
+                                </ice:column>
+
+                                <ice:column>
+                                    <f:facet name="header">
+                                        <ice:outputLabel></ice:outputLabel>
+                                    </f:facet>
+                                    <ice:commandButton image="#{resource['images:restore.png']}" value="Restablecer" onclick="confr#{u.usuCodigo}.show();"  />
+                                    <ace:confirmationDialog widgetVar="confr#{u.usuCodigo}" modal="true"
+                                                            header="Restablecer" message="¿Está seguro de restablecer la clave?"
+                                                            width="300" height="150" closable="true" closeOnEscape="true">
+                                        <ice:commandButton value="Sí" actionListener="#{administradorUsuariosBean.restablecerClave}" onclick="confr#{u.usuCodigo}.hide();">
+                                            <f:attribute name="usuCodigo" value="#{u.usuCodigo}" />
+                                        </ice:commandButton>
+                                        <h:commandButton value="No" onclick="confr#{u.usuCodigo}.hide();" />
+                                    </ace:confirmationDialog>                       
+                                </ice:column>
+
+                            </ice:dataTable>
+                            <ice:dataPaginator id="dataScroll_2" for="tablaUsuarios"
+                                               rowsCountVar="rowsCount"
+                                               displayedRowsCountVar="displayedRowsCount"
+                                               firstRowIndexVar="firstRowIndex"
+                                               lastRowIndexVar="lastRowIndex"
+                                               pageCountVar="pageCount"
+                                               pageIndexVar="pageIndex">
+                                <ice:outputFormat
+                                    styleClass="standard"
+                                    value="{0} usuarios registrados, mostrados {1} usuarios(s), de {2} a {3}. Página {4} / {5}.">
+                                    <f:param value="#{rowsCount}"/>
+                                    <f:param value="#{displayedRowsCount}"/>
+                                    <f:param value="#{firstRowIndex}"/>
+                                    <f:param value="#{lastRowIndex}"/>
+                                    <f:param value="#{pageIndex}"/>
+                                    <f:param value="#{pageCount}"/>
+                                </ice:outputFormat>
+                            </ice:dataPaginator>
+                            <ice:dataPaginator id="dataScroll_3"
+                                               for="tablaUsuarios"
+                                               paginator="true"
+                                               fastStep="3"
+                                               paginatorMaxPages="4">
+                                <f:facet name="first">
+                                    <ice:graphicImage
+                                        url="./xmlhttp/css/xp/css-images/arrow-first.gif"
+                                        style="border:none;"
+                                        title="First Page"/>
+                                </f:facet>
+                                <f:facet name="last">
+                                    <ice:graphicImage
+                                        url="./xmlhttp/css/xp/css-images/arrow-last.gif"
+                                        style="border:none;"
+                                        title="Last Page"/>
+                                </f:facet>
+                                <f:facet name="previous">
+                                    <ice:graphicImage
+                                        url="./xmlhttp/css/xp/css-images/arrow-previous.gif"
+                                        style="border:none;"
+                                        title="Previous Page"/>
+                                </f:facet>
+                                <f:facet name="next">
+                                    <ice:graphicImage
+                                        url="./xmlhttp/css/xp/css-images/arrow-next.gif"
+                                        style="border:none;"
+                                        title="Next Page"/>
+                                </f:facet>
+                                <f:facet name="fastforward">
+                                    <ice:graphicImage url="./xmlhttp/css/xp/css-images/arrow-ff.gif"
+                                                      style="border:none;"
+                                                      title="Fast Forward"/>
+                                </f:facet>
+                                <f:facet name="fastrewind">
+                                    <ice:graphicImage url="./xmlhttp/css/xp/css-images/arrow-fr.gif"
+                                                      style="border:none;"
+                                                      title="Fast Backwards"/>
+                                </f:facet>
+                            </ice:dataPaginator>
+                        </ice:form>
+                    </ice:panelGrid>
+
+                </ice:panelGrid>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

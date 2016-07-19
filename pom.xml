@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ec.com.facturaecuador</groupId>
+    <artifactId>facturaecuador</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>FacturaEcuador :: Parent</name>
+
+    <properties>
+        <alfresco-web-service-client.version>3.4.e</alfresco-web-service-client.version>
+        <aspectj.version>1.6.8</aspectj.version>
+        <axis.version>1.4</axis.version>
+        <cement.version>0.9.3.0</cement.version>
+        <commons-dbcp.version>1.4_3</commons-dbcp.version>
+        <commons-fileupload.version>1.3</commons-fileupload.version>
+        <commons-io.version>1.3.2</commons-io.version>
+        <commons-lang.version>2.4</commons-lang.version>
+        <cxf.version>2.7.6</cxf.version>
+        <dbcp.version>1.4</dbcp.version>
+        <dwr.version>2.0.10</dwr.version>
+        <javax.mail.version>1.4.4</javax.mail.version>
+        <javax.el.version>1.0</javax.el.version>
+        <javax.servlet.version>2.5</javax.servlet.version>
+        <javax.servlet.jsp.version>2.0</javax.servlet.jsp.version>
+        <javax.portlet.version>2.0</javax.portlet.version>
+        <jboss.seam.version>2.0.0.GA</jboss.seam.version>
+        <jcifs.version>1.3.17</jcifs.version>
+        <jsr250.version>1.0</jsr250.version>
+        <junit.version>4.10</junit.version>
+        <liferay-faces.version>3.2.4-ga5</liferay-faces.version>
+        <liferay.maven.plugin.version>6.2.10.4</liferay.maven.plugin.version>
+        <liferay.version>6.2.1</liferay.version>
+        <liferay.theme.parent>_styled</liferay.theme.parent>
+        <liferay.theme.type>vm</liferay.theme.type>
+        <openjpa.version>2.2.2</openjpa.version>
+        <opensaml.version>1.0.1</opensaml.version>
+        <org.springframework.version>3.2.4.RELEASE</org.springframework.version>
+        <org.springframework.ldap.version>1.3.1.RELEASE</org.springframework.ldap.version>
+        <org.springframework.ldapcontext.version>3.0.5.RELEASE</org.springframework.ldapcontext.version>
+        <spring.version>3.0.7.RELEASE</spring.version>
+        <postgresql.version>9.2-1002.jdbc4</postgresql.version>
+        <primefaces.version>3.5</primefaces.version>
+        <primefaces-extensions.version>0.7.1</primefaces-extensions.version>
+        <slf4j.version>1.7.5</slf4j.version>
+        <sunfaces.version>2.1.21</sunfaces.version>
+        <xmlsec.version>1.3.0</xmlsec.version>
+        <wss4j.version>1.6.17</wss4j.version>
+        <wss4j.xfire.version>1.1</wss4j.xfire.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!--JSF-->
+            <dependency>
+                <groupId>com.sun.faces</groupId>
+                <artifactId>jsf-api</artifactId>
+                <version>${sunfaces.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.faces</groupId>
+                <artifactId>jsf-impl</artifactId>
+                <version>${sunfaces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.ws.security</groupId>
+                <artifactId>wss4j</artifactId>
+                <version>${wss4j.version}</version>
+            </dependency>
+
+            <!-- DataSource-->
+            <dependency>
+                <groupId>commons-dbcp</groupId>
+                <artifactId>commons-dbcp</artifactId>
+                <version>${dbcp.version}</version>
+            </dependency>
+
+            <!--aspectjrt Persistencia-->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjtools</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.commons-dbcp</artifactId>
+                <version>${commons-dbcp.version}</version>
+            </dependency>
+
+            <!-- Spring 4 dependencies -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${org.springframework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${org.springframework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${org.springframework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${org.springframework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.annotation</groupId>
+                <artifactId>jsr250-api</artifactId>
+                <version>${jsr250.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${org.springframework.version}</version>
+            </dependency>
+
+            <!-- jpa -->
+            <dependency>
+                <groupId>org.apache.openjpa</groupId>
+                <artifactId>openjpa</artifactId>
+                <version>${openjpa.version}</version>
+            </dependency>
+
+            <!-- slf4j -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <!-- postgres -->
+            <dependency>
+                <groupId>postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.version}</version>
+            </dependency>
+
+            <!-- Java Mail API -->
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>${javax.mail.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>jcifs</groupId>
+                <artifactId>jcifs</artifactId>
+                <version>${jcifs.version}</version>
+            </dependency>
+
+            <!-- commons -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons-lang.version}</version>
+            </dependency>
+
+            <!-- wss4j -->
+            <dependency>
+                <groupId>xfire</groupId>
+                <artifactId>wss4j</artifactId>
+                <version>${wss4j.xfire.version}</version>
+            </dependency>
+
+            <!-- dwr -->
+            <dependency>
+                <groupId>org.directwebremoting</groupId>
+                <artifactId>dwr</artifactId>
+                <version>${dwr.version}</version>
+            </dependency>
+
+            <!-- instalado manualmente: mvn install:install-file -Dfile=Downloads/cementj-V0.9.3.0/lib/CementJ.jar
+            -DgroupId=cementj -DartifactId=cementj -Dversion=0.9.3.0 -Dpackaging=jar -->
+            <dependency>
+                <groupId>cementj</groupId>
+                <artifactId>cementj</artifactId>
+                <version>${cement.version}</version>
+            </dependency>
+
+            <!-- test -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>portal</module>
+        <module>common</module>
+    </modules>
+</project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/facturaEcuador">
+</Context>
+
+        <!--Revisar si esto aplica-->
+        <!--Resource name="jndi/MailSession"
+                  auth="Container"
+                  type="javax.mail.Session"
+                  username="documentos@facturaecuador.com"
+                  password="eC#90g2m"
+                  mail.debug="false"
+                  mail.user="documentos@facturaecuador.com"
+                  mail.password="eC#90g2m"
+                  mail.transport.protocol="smtp"
+                  mail.smtp.host="srv1.redamplia.com"
+                  mail.smtp.auth="true"
+                  mail.smtp.port="25"
+                  mail.smtp.starttls.enable="true"/-->

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="MacRoman"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <!-- lugar donde se encuentra el archivo de configuracion para conectar a la db -->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+    <!-- enabling annotation driven configuration /-->
+    <context:annotation-config/>
+
+    <!-- data source para conectividad con la bd -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+
+        <!-- Connection Pooling DBCP -->
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="maxIdle" value="${jdbc.maxIdle}"/>
+        <property name="defaultAutoCommit" value="${jdbc.defaultAutoCommit}"/>
+        <property name="removeAbandoned" value="${jdbc.removeAbandoned}"/>
+        <property name="removeAbandonedTimeout" value="${jdbc.removeAbandonedTimeout}"/>
+        <property name="logAbandoned" value="${jdbc.logAbandoned}"/>
+    </bean>
+
+    <!-- creamos el entity manager factory -->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+          lazy-init="false">
+        <property name="persistenceUnitName" value="${jdbc.persistenceUnitName}"/>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.OpenJpaVendorAdapter">
+                <property name="showSql" value="${jpa.showSql}"/>
+                <property name="database" value="${jpa.database}"/>
+            </bean>
+        </property>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+
+    <!-- Transaction Configuration -->
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+
+    <!-- Transactions -->
+    <bean id="transactionManager"
+          class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory"
+                  ref="entityManagerFactory"/>
+        <property name="nestedTransactionAllowed" value="true"/>
+
+    </bean>
+
+    <bean id="transactionInterceptor"
+          class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="transactionAttributeSource">
+            <bean class="org.springframework.transaction.annotation.AnnotationTransactionAttributeSource"/>
+        </property>
+    </bean>
+
+    <bean id="auditoriaDAO" class="net.fecuador.persist.model.dao.impl.AuditoriaDAOImpl"/>
+    <bean id="detalleAuditoriaDAO" class="net.fecuador.persist.model.dao.impl.DetalleAuditoriaDAOImpl"/>
+    <bean id="detalleRetencionDAO" class="net.fecuador.persist.model.dao.impl.DetalleRetencionDAOImpl"/>
+    <bean id="empresaDAO" class="net.fecuador.persist.model.dao.impl.EmpresaDAOImpl"/>
+    <bean id="facturaDAO" class="net.fecuador.persist.model.dao.impl.FacturaDAOImpl"/>
+    <bean id="guiaRemisionDAO" class="net.fecuador.persist.model.dao.impl.GuiaRemisionDAOImpl"/>
+    <bean id="notaCreditoDAO" class="net.fecuador.persist.model.dao.impl.NotaCreditoDAOImpl"/>
+    <bean id="notaDebitoDAO" class="net.fecuador.persist.model.dao.impl.NotaDebitoDAOImpl"/>
+    <bean id="perfilDAO" class="net.fecuador.persist.model.dao.impl.PerfilDAOImpl"/>
+    <bean id="retencionDAO" class="net.fecuador.persist.model.dao.impl.RetencionDAOImpl"/>
+    <bean id="tipoDAO" class="net.fecuador.persist.model.dao.impl.TipoDAOImpl"/>
+    <bean id="usuarioDAO" class="net.fecuador.persist.model.dao.impl.UsuarioDAOImpl"/>
+
+</beans>
