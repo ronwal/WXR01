@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="fecuadorPersistence" transaction-type="RESOURCE_LOCAL">
+        <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <class>ec.fecuador.persistence.factecuador.data.entities.AuditoriaEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.DetalleAuditoriaEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.DetalleRetencionEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.EmpresaEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.FacturaEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.GuiaRemisionEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.NotaCreditoEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.NotaDebitoEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.PerfilEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.RetencionEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.TipoEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.UsuarioEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.DetalleMenuSystemEntity</class>
+        <class>ec.fecuador.persistence.factecuador.data.entities.MenuSystemEntity</class>
+        <properties>
+            <property name="openjpa.RuntimeUnenhancedClasses" value="supported"/>
+            <property name="openjpa.jdbc.SchemaFactory" value="native(ForeignKeys=true)"/>
+            <property name="openjpa.jdbc.MappingDefaults"
+                      value="ForeignKeyDeleteAction=restrict, JoinForeignKeyDeleteAction=restrict"/>
+            <property name="openjpa.Compatibility" value="CheckDatabaseForCascadePersistToDetachedEntity=true"/>
+            <property name="openjpa.jdbc.DBDictionary" value="sqlserver(UniqueIdentifierAsVarbinary=false)"/>
+            <property name="openjpa.Multithreaded" value="false"/>
+            <property name="openjpa.Optimistic" value="false"/>
+            <property name="openjpa.TransactionMode" value="local"/>
+            <property name="openjpa.ConnectionFactoryMode" value="local"/>
+            <property name="openjpa.LockManager" value="none"/>
+            <property name="openjpa.Log" value="DefaultLevel=ERROR, Runtime=ERROR, Tool=ERROR, SQL=ERROR"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:postgresql://localhost:5432/factura_ecuador"/>
+            <property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver"/>
+        </properties>
+    </persistence-unit>
+</persistence>

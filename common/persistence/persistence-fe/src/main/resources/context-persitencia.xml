@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:ctx="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- lugar donde se encuentra el archivo de configuracion para conectar a la db -->
+    <ctx:property-placeholder location="classpath:jdbc-persist.properties"/>
+
+    <!-- enabling annotation driven configuration /-->
+    <ctx:annotation-config/>
+
+    <!-- data source para conectividad con la bd -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.data.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+
+        <!-- Connection Pooling DBCP -->
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="maxIdle" value="${jdbc.maxIdle}"/>
+        <property name="defaultAutoCommit" value="${jdbc.defaultAutoCommit}"/>
+        <property name="removeAbandoned" value="${jdbc.removeAbandoned}"/>
+        <property name="removeAbandonedTimeout" value="${jdbc.removeAbandonedTimeout}"/>
+        <property name="logAbandoned" value="${jdbc.logAbandoned}"/>
+
+    </bean>
+
+    <aop:config>
+        <aop:pointcut id="dataServiceOperation"
+                      expression="execution(* ec.fecuador.persistence.factecuador.data.dao.*.*(..))"/>
+        <aop:advisor pointcut-ref="dataServiceOperation" advice-ref="dataTxAdvice"/>
+    </aop:config>
+
+    <tx:advice id="dataTxAdvice" transaction-manager="dataTxManager">
+        <tx:attributes>
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="create"/>
+            <tx:method name="delete"/>
+            <tx:method name="update"/>
+            <tx:method name="*"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <bean id="dataEntManFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+          lazy-init="false">
+        <property name="persistenceUnitName" value="${jpa.data.unitname}"/>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="jpaPropertyMap">
+            <map>
+                <!-- Make it so this will run in an IDE test -->
+                <entry key="openjpa.RuntimeUnenhancedClasses" value="supported"/>
+            </map>
+        </property>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.OpenJpaVendorAdapter">
+                <property name="showSql" value="${jpa.showSql}"/>
+                <property name="database" value="${jpa.database}"/>
+            </bean>
+        </property>
+        <property name="jpaProperties">
+            <props>
+                <!--prop key="openjpa.jdbc.DBDictionary"> value="hsql(SimulateLocking=true)"/-->
+            </props>
+        </property>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="dataTxManager"/>
+
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+
+    <!-- Transaction Configuration -->
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+
+    <!-- Transactions -->
+    <bean id="dataTxManager"
+          class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory"
+                  ref="dataEntManFactory"/>
+        <property name="nestedTransactionAllowed" value="true"/>
+
+    </bean>
+
+    <bean id="dataTransacIntercep"
+          class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager" ref="dataTxManager"/>
+        <property name="transactionAttributeSource">
+            <bean class="org.springframework.transaction.annotation.AnnotationTransactionAttributeSource"/>
+        </property>
+    </bean>
+
+    <bean id="auditoriaDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.AuditoriaDAOImpl"/>
+    <bean id="detalleAuditoriaDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.DetalleAuditoriaDAOImpl"/>
+    <bean id="detalleRetencionDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.DetalleRetencionDAOImpl"/>
+    <bean id="empresaDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.EmpresaDAOImpl"/>
+    <bean id="facturaDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.FacturaDAOImpl"/>
+    <bean id="guiaRemisionDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.GuiaRemisionDAOImpl"/>
+    <bean id="notaCreditoDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.NotaCreditoDAOImpl"/>
+    <bean id="notaDebitoDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.NotaDebitoDAOImpl"/>
+    <bean id="perfilDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.PerfilDAOImpl"/>
+    <bean id="retencionDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.RetencionDAOImpl"/>
+    <bean id="tipoDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.TipoDAOImpl"/>
+    <bean id="usuarioDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.UsuarioDAOImpl"/>
+
+</beans>

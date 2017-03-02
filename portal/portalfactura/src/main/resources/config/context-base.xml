@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+    <import resource="classpath*:context-persitencia.xml"/>
+
+    <bean id="facElectOpDAO" class="ec.fecuador.persistence.factecuador.generic.operation.impl.FacElectOpDAOImpl">
+        <property name="auditoriaDAO" ref="auditoriaDAO"/>
+        <property name="detalleAuditoriaDAO" ref="detalleAuditoriaDAO"/>
+        <property name="detalleRetencionDAO" ref="detalleRetencionDAO"/>
+        <property name="empresaDAO" ref="empresaDAO"/>
+        <property name="facturaDAO" ref="facturaDAO"/>
+        <property name="guiaRemisionDAO" ref="guiaRemisionDAO"/>
+        <property name="notaCreditoDAO" ref="notaCreditoDAO"/>
+        <property name="notaDebitoDAO" ref="notaDebitoDAO"/>
+        <property name="perfilDAO" ref="perfilDAO"/>
+        <property name="retencionDAO" ref="retencionDAO"/>
+        <property name="tipoDAO" ref="tipoDAO"/>
+        <property name="usuarioDAO" ref="usuarioDAO"/>
+    </bean>
+</beans>

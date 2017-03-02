@@ -1,0 +1,165 @@
+body {
+    background: #f1f1f1;
+}
+
+#header {
+    height: 100px;
+    background: white;
+}
+
+.containerParent {
+    max-width: 75%;
+    min-height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+#pnlPaginas {
+    min-width: 85%;
+}
+
+.container {
+    background: white;
+    align-content: center;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container footer {
+    text-align: center;
+    margin-top: -20px;
+}
+
+.u4 {
+    float: left;
+    /*position: absolute;*/
+    max-width: 10px;
+}
+
+.u4 img {
+    width: 200px;
+}
+
+.u4 .wrapper {
+    margin-top: -10px;
+    margin-left: -15px;
+}
+
+.u8 {
+    float: right;
+    margin-top: 55px;
+    margin-right: 0px;
+}
+
+.login {
+    float: right;
+    margin-right: 0px;
+    margin-top: -85px;
+}
+
+.ui-widget-content {
+    border-color: transparent;
+}
+
+.col2-center {
+    width: 2%;
+    height: 40px;
+    text-align: center;
+}
+
+.col30-right {
+    width: 30%;
+    height: 25px;
+    text-align: right;
+}
+
+.col40-right {
+    width: 40%;
+    height: 25px;
+    text-align: right;
+}
+
+.col40-left {
+    width: 40%;
+    height: 25px;
+    text-align: left;
+}
+
+.panelCent {
+    color: #747474;
+    padding-top: 4px;
+    padding-left: 15px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.ui-widget .ui-widget {
+    font-size: 12px;
+}
+
+.ui-selectonemenu{
+    min-width: 80% !important;
+}
+
+.ui-autocomplete-panel {
+    font-size: 12px;
+}
+
+#leftDiv {
+    max-width: 45%;
+}
+
+#leftDiv ul {
+    list-style-type: circle !important;
+
+}
+
+#rightDiv {
+    text-align: center;
+    max-width: 50%;
+    font-size: 14px;
+}
+
+/*Media Style*/
+@media screen and (max-width: 600px) and (min-width: 310px) {
+    .login {
+        margin-top: 0px !important;
+    }
+
+    .u8 {
+        margin-top: -40px;
+        min-width: 100%;
+        margin-right: 0px;
+    }
+
+    .menu-collapser {
+        margin-top: 0px !important;
+    }
+
+    .panelCent {
+        font-size: 10px;
+        display: block;
+    }
+
+    .containerParent {
+        max-width: 90%;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    #rightDiv {
+        max-width: 90%;
+    }
+
+    #dlgLogin {
+        font-size: 12px;
+    }
+
+    #leftDiv {
+        display: none;
+    }
+}

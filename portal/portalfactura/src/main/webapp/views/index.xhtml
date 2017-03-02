@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<ui:composition template="templates/template.xhtml">
+    <ui:define name="pageContent">
+        <div id="leftDiv" class="panelCent">
+            <h2 style="font-weight: bold; margin-left: 15px">ALMACENAMIENTO Y CONSULTA DE DOCUMENTOS ELECTRONICOS A TRAVES DE INTERNET.</h2>
+            <ul>
+                <li>Controles de seguridad, totalmente confiable</li>
+                <li>Fácil de usar, amigable, requiere capacitación mínima</li>
+                <li>Accesible desde cualquier sitio</li>
+                <li>Conexión en línea con el generador de documentos electrónicos a través de WebServps.</li>
+                <li>Permite re-enviar por correo el formato electrónico.</li>
+                <li>Genera el formato RIDE (Representación impresa documento electrónico) para ser visualizado, impreso o almacenado en formato PDF.</li>
+                <li>Permite bajar el archivo XML para almacenamiento local.</li>
+                <li>Gráficos estadísticos con los principales datos de los documentos electrónicos, que le permitirán potencializar su negocio</li>
+                <li>Ahorro de recursos naturales</li>
+                <li>Auditoría transaccional.</li>
+                <li>Compatible con cualquier Smartphone, Tablet y navegador de internet.</li>
+                <li>Rapidez transaccional.</li>
+            </ul>
+        </div>
+        <div id="rightDiv" class="panelCent">
+            <h:form>
+                <p:panelGrid columns="1" style="text-align: center;width: 100%; border-collapse: collapse;">
+                    <p:graphicImage value="/style/images/buscar_documento.png" width="64" height="64"/>
+                    <p:outputLabel>Busque su Documento:</p:outputLabel>
+                    <p:panelGrid columns="2" columnClasses="col30-right,col40-left">
+                        <p:outputLabel value="* Tipo:"/>
+                        <p:selectOneMenu value="#{loginController.docSearch}">
+                            <f:selectItem itemLabel="ELIJA UN DOCUMENTO"/>
+                            <f:selectItems value="#{loginController.docsElect}"
+                                           var="documentos"
+                                           itemLabel="#{documentos.name}"
+                                           itemValue="#{documentos.value}"
+                                           itemDescription="#{documentos.name}"/>
+                        </p:selectOneMenu>
+
+                        <p:outputLabel for="acEmpresa" value="* Empresa:"/>
+                        <p:autoComplete id="acEmpresa" value="#{loginController.empSel}"
+                                        completeMethod="#{loginController.getEmpresasFactEcu}" maxResults="5"
+                                        var="empr" itemLabel="#{empr.empRazonSocial}" itemValue="#{empr}"
+                                        converter="empresaConverter" forceSelection="true" process="@this"
+                                        style="max-width: 185px">
+                            <p:column>
+                                <p:graphicImage value="#{loginController.streamImage}" width="40px" height="20px">
+                                    <f:param name="imgparm" value="#{empr.empCodigo}" />
+                                </p:graphicImage>
+                            </p:column>
+                            <p:column>
+                                <h:outputText value="#{empr.empRazonSocial}"/>
+                            </p:column>
+                        </p:autoComplete>
+
+                        <p:outputLabel value="* RUC/CI Receptor:"/>
+                        <p:inputText value=""></p:inputText>
+
+                        <p:outputLabel value="Serie:"/>
+                        <p:inputText value=""></p:inputText>
+
+                        <p:outputLabel value="Punto de Emisión:"/>
+                        <p:inputText value=""></p:inputText>
+
+                        <p:outputLabel value="* Secuencial:"/>
+                        <p:inputText value=""></p:inputText>
+                    </p:panelGrid>
+                    <p:commandButton value="Buscar"/>
+                    <p:panelGrid columns="2" rendered="" cellpadding="5" cellspacing="5">
+                        <p:commandLink value="">
+                            <p:graphicImage value="/style/images/pdf.png"/>
+                            <p:outputLabel>Generar PDF</p:outputLabel>
+                        </p:commandLink>
+                        <p:commandLink value="">
+                            <p:graphicImage url="/style/images/download.png"/>
+                            <p:outputLabel>Descargar XML</p:outputLabel>
+                        </p:commandLink>
+                    </p:panelGrid>
+                </p:panelGrid>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>

@@ -15,12 +15,5 @@
 
     <!-- instalado manualmente: mvn install:install-file -Dfile=Downloads/cementj-V0.9.3.0/lib/CementJ.jar
         -DgroupId=cementj -DartifactId=cementj -Dversion=0.9.3.0 -Dpackaging=jar -->
-    <dependencies>
-        <dependency>
-            <groupId>sri</groupId>
-            <artifactId>sri</artifactId>
-            <version>1.0</version>
-        </dependency>
-    </dependencies>
 
 </project>

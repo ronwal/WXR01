@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+
+    <title>Factura Ecuador</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="#{request.contextPath}/style/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="#{request.contextPath}/style/css/slimmenu.min.css"/>
+    <style type="text/css">
+        body {
+            font-family: 'Lucida Sans Unicode', 'Lucida Console', sans-serif;
+            padding: 0;
+        }
+
+        a, a:active {
+            text-decoration: none
+        }
+    </style>
+</h:head>
+<body>
+<div id="header_container">
+    <div class="container">
+        <!-- Header -->
+        <div id="header" class="row">
+            <div class="u4">
+                <div class="wrapper">
+                    <h1><a href="#{loginController.homeUrl}"><img
+                            src="#{request.contextPath}/style/images/facturaEcuador.png"
+                            alt="FacturaEcuador" height="100" width="250"/></a></h1>
+                </div>
+            </div>
+
+            <nav id="main-nav" class="u8">
+                <ul class="slimmenu">
+                    <c:forEach items="#{loginController.memuSystem}" var="modules"
+                               varStatus="status">
+                        <li>
+                            <a href="#{loginController.createURL(modules.menuSystemByIdMenu.urlParth,null)}">#{modules.menuSystemByIdMenu.nombreMenu}</a>
+                        </li>
+                    </c:forEach>
+                </ul>
+
+                <script type="text/javascript" src="#{request.contextPath}/style/js/jquery.slimmenu.js"></script>
+                <script type="text/javascript" src="#{request.contextPath}/style/js/jquery.easing.min.js"></script>
+                <script type="text/javascript">
+                    $('.slimmenu').slimmenu(
+                        {
+                            resizeWidth: '800',
+                            collapserTitle: 'Main Menu',
+                            animSpeed: 'medium',
+                            indentChildren: true,
+                            childrenIndenter: '&raquo;'
+                        });
+                </script>
+
+                <div id="login" class="login">
+                    <p:commandButton value="Iniciar Sesión" onclick="PF('dlgLogin').show();" action="#{loginController.setEmpUsu('')}"/>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div id="containerParent" class="containerParent">
+    <ui:insert name="pageContent">Content</ui:insert>
+</div>
+
+<div class="container">
+    <!-- Footer -->
+    <footer>
+        <p><img src="#{request.contextPath}/style/images/twitter.png" alt="twitter"/>&nbsp;<img
+                src="#{request.contextPath}/style/images/facebook.png" alt="facebook"/>&nbsp;<img
+                src="#{request.contextPath}/style/images/rss.png" alt="rss"/></p>
+        <div style="margin-top:10px;text-align: center;font-size: 11px;color:#3f3f3f;">Con soporte de:</div>
+
+        <table width="350px" border="0" style="margin-left: auto;margin-right: auto;border-collapse: collapse;">
+            <tr>
+
+                <td align="center" valign="bottom"><img alt=""
+                                                        src="#{request.contextPath}/style/images/postgresql-logo.png"
+                                                        height="24px"/></td>
+                <td align="center" valign="bottom"><img alt="" src="#{request.contextPath}/style/images/java-logo.png"
+                                                        height="24px"/></td>
+                <td align="center" valign="bottom"><img alt=""
+                                                        src="#{request.contextPath}/style/images/icefaces-logo.png"
+                                                        height="24px"/></td>
+                <td align="center" valign="bottom"><img alt=""
+                                                        src="#{request.contextPath}/style/images/jasper-reports-logo.png"
+                                                        height="24px"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" valign="top" style="font-size: 10px;color:#3f3f3f;">PostgreSQL</td>
+                <td align="center" valign="top" style="font-size: 10px;color:#3f3f3f;">Java</td>
+                <td align="center" valign="top" style="font-size: 10px;color:#3f3f3f;">ICE Faces</td>
+                <td align="center" valign="top" style="font-size: 10px;color:#3f3f3f;">Jasper Reports</td>
+            </tr>
+        </table>
+
+    </footer>
+</div>
+
+<p:dialog id="dlgLogin" widgetVar="dlgLogin" header="Iniciar Sesión" showEffect="clip"
+          modal="true" resizable="false" position="top" style="min-width: 345px; max-width: 350px;">
+    <h:form id="frmlogin">
+        <p:panelGrid style="text-align: center">
+            <p:messages id="messages" showDetail="false" autoUpdate="true" closable="true"
+                        style="margin-left: 0px !important;"/>
+            <p:row>
+                <p:column style="font-weight: bold;"><p:outputLabel value="Empresa:"/></p:column>
+                <p:column>
+                    <p:inputText id="empresaNomb" value="#{loginController.empUsu}" required="true"
+                                 requiredMessage="Debe ingresar un dato de Empresa.">
+                        <p:ajax event="keyup" process="@this" update="frmlogin:lstEmpresa"/>
+                    </p:inputText>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column colspan="2">
+                    <p:dataTable id="lstEmpresa" var="empresas" required="true"
+                                 requiredMessage="Debe seleccionar una Empresa."
+                                 style="#{loginController.getEmpresasFactEcu(loginController.empUsu).size()>0?'':'display:none'}"
+                                 value="#{loginController.getEmpresasFactEcu(loginController.empUsu)}"
+                                 selectionMode="single" selection="#{loginController.empSel}" rowKey="#{empresas}"
+                                 paginator="true"
+                                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+                                 rows="5" paginatorPosition="bottom">
+                        <p:column>
+                            <p:graphicImage value="#{loginController.streamImage}" width="40px" height="20px">
+                                <f:param name="imgparm" value="#{empresas.empCodigo}"/>
+                            </p:graphicImage>
+                        </p:column>
+                        <p:column>
+                            <h:outputText value="#{empresas.empRazonSocial}"/>
+                        </p:column>
+                    </p:dataTable>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column style="font-weight: bold;"><p:outputLabel id="uName" value="Usuario:"/></p:column>
+                <p:column><p:inputText value="#{loginController.user}" process="@this" required="true"
+                                       requiredMessage="Usuario REQUERIDO"/></p:column>
+                <p:message for="uName"/>
+            </p:row>
+            <p:row>
+                <p:column style="font-weight: bold;"><p:outputLabel id="uPass" value="Contraseña:"/></p:column>
+                <p:column><p:password value="#{loginController.password}" process="@this" required="true"
+                                      requiredMessage="Contraseña REQUERIDA"/></p:column>
+                <p:message for="uPass"/>
+            </p:row>
+            <p:row>
+                <p:column colspan="2">
+                    <p:commandLink value="Ingresar" action="#{loginController.loginUser()}"/>
+                </p:column>
+            </p:row>
+        </p:panelGrid>
+    </h:form>
+</p:dialog>
+</body>
+</html>

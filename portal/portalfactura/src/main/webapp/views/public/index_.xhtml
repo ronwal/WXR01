@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<ui:define name="metadata">
+</ui:define>
+
+<h:head>
+    <title><ui:define name="Gestión de Tramites"></ui:define></title>
+</h:head>
+<h:body>
+    <p:panelGrid id="leftCont" columns="2">
+        <p:panelGrid>
+            <div>
+                <h2 style="font-weight: bold; margin-left: 15px">ALMACENAMIENTO Y CONSULTA DE DOCUMENTOS ELECTRONICOS A TRAVES DE INTERNET.</h2>
+                <ul>
+                    <li>Controles de seguridad, totalmente confiable</li>
+                    <li>Fácil de usar, amigable, requiere capacitación mínima</li>
+                    <li>Accesible desde cualquier sitio</li>
+                    <li>Conexión en línea con el generador de documentos electrónicos a través de WebServps.</li>
+                    <li>Permite re-enviar por correo el formato electrónico.</li>
+                    <li>Genera el formato RIDE (Representación impresa documento electrónico) para ser visualizado, impreso o almacenado en formato PDF.</li>
+                    <li>Permite bajar el archivo XML para almacenamiento local.</li>
+                    <li>Gráficos estadísticos con los principales datos de los documentos electrónicos, que le permitirán potencializar su negocio</li>
+                    <li>Ahorro de recursos naturales</li>
+                    <li>Auditoría transaccional.</li>
+                    <li>Compatible con cualquier Smartphone, Tablet y navegador de internet.</li>
+                    <li>Rapidez transaccional.</li>
+                </ul>
+
+            </div>
+        </p:panelGrid>
+        <p:panelGrid style="text-align: center">
+            <h:form>
+                <p:panelGrid columns="1" style="text-align: center;width: 100%; border-collapse: collapse;">
+                    <p:graphicImage value="/style/images/buscar_documento.png" width="64" height="64"/>
+                    <p:outputLabel>Busque su Documento:</p:outputLabel>
+                    <p:panelGrid columns="2" columnClasses="col30-right,col40-left">
+                        <p:outputLabel>Tipo:</p:outputLabel>
+                        <p:selectOneMenu value="#{loginController.docSearch}">
+                            <f:selectItem itemLabel="ELIJA UN DOCUMENTO"/>
+                            <f:selectItems value="#{loginController.docsElect}"
+                                           var="documentos"
+                                           itemLabel="#{documentos.name}"
+                                           itemValue="#{documentos.value}"
+                                           itemDescription="#{documentos.name}"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel>RUC Emisor:</p:outputLabel>
+                        <p:inputText value=""></p:inputText>
+                        <p:outputLabel>RUC/CI Receptor:</p:outputLabel>
+                        <p:inputText value=""></p:inputText>
+                        <p:outputLabel>Serie:</p:outputLabel>
+                        <p:inputText value=""></p:inputText>
+                        <p:outputLabel>Punto de Emisión:</p:outputLabel>
+                        <p:inputText value=""></p:inputText>
+                        <p:outputLabel>Secuencial:</p:outputLabel>
+                        <p:inputText value=""></p:inputText>
+                    </p:panelGrid>
+                    <p:commandButton value="Buscar"/>
+                    <p:panelGrid columns="2" rendered="" cellpadding="5" cellspacing="5">
+                        <p:commandLink value="">
+                            <p:graphicImage value="/style/images/pdf.png"/>
+                            <p:outputLabel>Generar PDF</p:outputLabel>
+                        </p:commandLink>
+                        <p:commandLink value="">
+                            <p:graphicImage url="/style/images/download.png"/>
+                            <p:outputLabel>Descargar XML</p:outputLabel>
+                        </p:commandLink>
+                    </p:panelGrid>
+                </p:panelGrid>
+            </h:form>
+        </p:panelGrid>
+    </p:panelGrid>
+</h:body>
+</html>

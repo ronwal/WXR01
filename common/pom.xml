@@ -11,11 +11,11 @@
 
     <artifactId>common</artifactId>
     <packaging>pom</packaging>
-    <name>FEcuador :: Comun :: Parent</name>
+    <name>FEcuador :: COMMON</name>
 
     <modules>
-        <module>persistence-fe</module>
-        <module>config-fe</module>
+        <module>persistence</module>
+        <module>utils</module>
     </modules>
 
 
