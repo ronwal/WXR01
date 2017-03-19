@@ -141,13 +141,14 @@
           <element id="library" level="project" name="Maven: org.apache.openjpa:openjpa-persistence:2.1.1" />
           <element id="library" level="project" name="Maven: org.jboss.as:jboss-as-build-config:7.2.0.Final" />
           <element id="library" level="project" name="Maven: org.directwebremoting:dwr:3.0.2-RELEASE" />
-          <element id="library" level="project" name="Maven: org.primefaces:primefaces:6.0" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:6.1.RC1" />
           <element id="library" level="project" name="Maven: org.primefaces.themes:flick:1.0.10" />
           <element id="archive" name="persistence-fe-1.0-SNAPSHOT.jar">
             <element id="module-output" name="persistence-fe" />
           </element>
           <element id="library" level="project" name="Maven: commons-dbcp:commons-dbcp:1.4" />
           <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.5.4" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.4" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.5.RELEASE" />
@@ -176,7 +177,6 @@
           <element id="archive" name="security-fe-1.0-SNAPSHOT.jar">
             <element id="module-output" name="security-fe" />
           </element>
-          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.2" />
           <element id="archive" name="config-fe-1.0-SNAPSHOT.jar">
             <element id="module-output" name="config-fe" />
           </element>

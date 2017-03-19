@@ -32,7 +32,6 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         create(objEntidad);
     }
 
-
     public void eliminarFact(FacturaEntity objEntidad) {
         delete(objEntidad);
     }

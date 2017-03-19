@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="../templates/template_login.xhtml">
+    <ui:define name="pageContent">
+        <h:form id="cargaForm">
+            <p:growl id="msgs" showDetail="true"/>
+            <p:panelGrid columns="1" style="width: 90%; text-align: left; margin-left: 3%;">
+                <div style="text-align: center;">
+                    <p:outputLabel style="font-size: 18px;" value="CARGA DOCUMENTOS"/>
+                </div>
+                <p:outputPanel>
+                    <p:panelGrid style="">
+                        <p:row>
+                            <p:column style="font-weight: bold;" styleClass="col30-right">
+                                <p:outputLabel id="cTipo" value="Tipo:"/>
+                            </p:column>
+                            <p:column styleClass="col40-left">
+                                <p:selectOneMenu value="#{cargaController.tipoRegistro}"
+                                                 style="width:150px">
+                                    <p:ajax process="@this"/>
+                                    <f:selectItem itemLabel="Selecciona un Tipo Registro" noSelectionOption="true"/>
+                                    <f:selectItem itemValue="#{0}" itemLabel="(SIN ESPECIFICAR)"/>
+                                    <f:selectItem itemValue="#{1}" itemLabel="Enviado"/>
+                                    <f:selectItem itemValue="#{2}" itemLabel="Recibido"/>
+                                </p:selectOneMenu>
+                            </p:column>
+                            <p:message for="cTipo"/>
+                        </p:row>
+                        <p:row>
+                            <p:column style="font-weight: bold;" styleClass="col30-right">
+                                <p:outputLabel id="cArchi" value="Archivo:"/>
+                            </p:column>
+                            <p:column styleClass="col40-left">
+                                <p:fileUpload fileUploadListener="#{fileUploadView.handleFileUpload}" mode="advanced"
+                                              dragDropSupport="true"
+                                              update=":cargaForm:msgs" fileLimit="1"
+                                              allowTypes="/(\.|\/)(xml|txt|cvs)$/"/>
+                            </p:column>
+                            <p:message for="cArchi"/>
+                        </p:row>
+                    </p:panelGrid>
+                </p:outputPanel>
+            </p:panelGrid>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

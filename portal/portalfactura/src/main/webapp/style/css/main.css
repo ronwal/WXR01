@@ -3,8 +3,39 @@ body {
 }
 
 #header {
-    height: 100px;
+    height: auto;
     background: white;
+}
+
+#pnlPaginas {
+    min-width: 85%;
+}
+
+#leftDiv {
+    max-width: 45%;
+}
+
+#leftDiv ul {
+    list-style-type: circle !important;
+
+}
+
+.ui-selectoneradio label {
+    margin: 0 0px 0 5px;
+}
+
+#rightDiv {
+    text-align: center;
+    max-width: 50%;
+    font-size: 14px;
+}
+
+.logedHeader {
+    padding-top: 4px;
+    padding-left: 15px;
+    font-size: 14px;
+    display: inline-block;
+    width: 90%;
 }
 
 .containerParent {
@@ -13,10 +44,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     background-color: white;
-}
-
-#pnlPaginas {
-    min-width: 85%;
 }
 
 .container {
@@ -74,6 +101,13 @@ body {
     height: 25px;
     text-align: right;
 }
+.col-right {
+    text-align: right;
+}
+
+.col-left {
+    text-align: left;
+}
 
 .col40-right {
     width: 40%;
@@ -95,11 +129,11 @@ body {
     display: inline-block;
 }
 
-.ui-widget .ui-widget {
-    font-size: 12px;
+.ui-widget .ui-widget, .ui-panelgrid .ui-widget {
+    font-size: 11px;
 }
 
-.ui-selectonemenu{
+.ui-selectonemenu {
     min-width: 80% !important;
 }
 
@@ -107,19 +141,25 @@ body {
     font-size: 12px;
 }
 
-#leftDiv {
-    max-width: 45%;
+.info {
+    padding: 1em;
+    height: 80px;
 }
 
-#leftDiv ul {
-    list-style-type: circle !important;
-
+.info .logo {
+    padding: 1em;
+    height: auto;
+    float: left;
 }
 
-#rightDiv {
-    text-align: center;
-    max-width: 50%;
-    font-size: 14px;
+.info .empresa {
+    float: left;
+    max-width: 30%;
+}
+
+.info .user {
+    float: right;
+    width: auto;
 }
 
 /*Media Style*/
@@ -149,6 +189,25 @@ body {
 
     .container {
         max-width: 90%;
+    }
+
+    .ui-panelgrid .ui-panelgrid-cell {
+        border: 0px none inherit;
+        padding: 0px 10px !important;
+    }
+
+    .info .logo {
+        padding: 1em;
+        height: 85px;
+        float: none;
+    }
+
+    .info .user {
+        float: left;
+    }
+
+    .info .empresa, #userUs, #userIde {
+        display: none
     }
 
     #rightDiv {

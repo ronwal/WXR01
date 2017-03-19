@@ -33,7 +33,7 @@
                     <p:panelGrid columns="2" columnClasses="col30-right,col40-left">
                         <p:outputLabel value="* Tipo:"/>
                         <p:selectOneMenu value="#{loginController.docSearch}">
-                            <f:selectItem itemLabel="ELIJA UN DOCUMENTO"/>
+                            <f:selectItem itemLabel="ELIJA UN DOCUMENTO" itemValue="" noSelectionOption="true"/>
                             <f:selectItems value="#{loginController.docsElect}"
                                            var="documentos"
                                            itemLabel="#{documentos.name}"
@@ -48,7 +48,7 @@
                                         converter="empresaConverter" forceSelection="true" process="@this"
                                         style="max-width: 185px">
                             <p:column>
-                                <p:graphicImage value="#{loginController.streamImage}" width="40px" height="20px">
+                                <p:graphicImage value="#{util.streamImage}" width="40px" height="20px">
                                     <f:param name="imgparm" value="#{empr.empCodigo}" />
                                 </p:graphicImage>
                             </p:column>

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="../templates/template_login.xhtml">
+    <ui:define name="pageContent">
+        <h:form id="userForm">
+            <p:growl id="msgs" showDetail="true"/>
+            <p:panelGrid columns="1" style="width: 90%; text-align: left; margin-left: 3%;">
+                <div style="text-align: center;">
+                    <p:outputLabel style="font-size: 18px;" value="USUARIOS REGISTRADOS"/>
+                </div>
+                <p:commandButton icon="ui-icon-circle-plus" value="Añadir Usuario"
+                                 action="#{usuarioController.newUser()}"
+                                 oncomplete="PF('userEditWgt').show()" update=":userForm:userEditWgt"/>
+                <p:dataTable id="userTable" value="#{dataUserLazy.model}" var="usvar"
+                             currentPageReportTemplate="Reg.: {startRecord} - {endRecord} de {totalRecords}, Pag. {currentPage} de {totalPages}"
+                             paginatorTemplate="{RowsPerPageDropdown} {CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+                             paginator="true" rows="15" rowsPerPageTemplate="15,50,75,100" paginatorPosition="bottom"
+                             lazy="true" process="@this" selectionMode="single" rowKey="#{usvar.usuCodigo}">
+
+                    <p:ajax event="rowSelect" listener="#{usuarioController.onRowSelect}"
+                            update=":userForm:msgs,:userForm" oncomplete="PF('userEditWgt').show()"/>
+                    <p:ajax event="rowUnselect" listener="#{usuarioController.onRowUnselect}" update=":userForm:msgs"/>
+
+                    <p:column headerText="Cedula" sortBy="#{usvar.usuIdentificacion}"
+                              filterBy="#{usvar.usuIdentificacion}">
+                        <h:outputText value="#{usvar.usuIdentificacion}"/>
+                    </p:column>
+                    <p:column headerText="Nombres" sortBy="#{usvar.usuNombre}" filterBy="#{usvar.usuNombre}"
+                              filterMatchMode="contains" priority="1">
+                        <h:outputText value="#{usvar.usuNombre}"/>
+                    </p:column>
+                    <p:column headerText="Usuario" sortBy="#{usvar.usuNick}" filterBy="#{usvar.usuNick}"
+                              filterMatchMode="contains" priority="3">
+                        <h:outputText value="#{usvar.usuNick}"/>
+                    </p:column>
+                    <p:column headerText="Perfil" sortBy="#{usvar.prfCodigo}" priority="3">
+                        <h:outputText value="#{usvar.perfil.prfNombre}"/>
+                    </p:column>
+                    <p:column headerText="Estado" sortBy="#{usvar.usuActivo}" priority="2">
+                        <h:outputText value="#{usvar.usuActivo?'Activo':'Inactivo'}"/>
+                    </p:column>
+                </p:dataTable>
+            </p:panelGrid>
+
+            <p:dialog header="Editar Usuario" id="userEditWgt" widgetVar="userEditWgt" modal="true" showEffect="fade"
+                      hideEffect="fade" resizable="false" position="top">
+                <p:outputPanel id="userEditDetail">
+                    <p:panelGrid>
+                        <p:row>
+                            <p:column style="font-weight: bold;" styleClass="col30-right">
+                                <p:outputLabel id="uPerf" value="Perfil:"/>
+                            </p:column>
+                            <p:column styleClass="col40-left">
+                                <p:selectOneMenu value="#{usuarioController.usuarioSel.prfCodigo}"
+                                                 style="width:150px">
+                                    <p:ajax process="@this"/>
+                                    <f:selectItem itemLabel="Selecciona un Perfil" noSelectionOption="true"/>
+                                    <f:selectItems value="#{usuarioController.perfiles}"
+                                                   var="uprf"
+                                                   itemLabel="#{uprf.prfNombre}"
+                                                   itemDescription="#{uprf.prfCodigo}"
+                                                   itemValue="#{uprf.prfCodigo}"/>
+                                </p:selectOneMenu>
+                            </p:column>
+                            <p:message for="uPerf"/>
+                        </p:row>
+                        <p:row>
+                            <p:column style="font-weight: bold;" styleClass="col30-right">
+                                <p:outputLabel id="uRuc" value="CED/RUD:"/>
+                            </p:column>
+                            <p:column styleClass="col40-left">
+                                <p:inputText
+                                        value="#{usuarioController.usuarioSel.usuIdentificacion}"
+                                        required="true" immediate="true"
+                                        requiredMessage="Contraseña REQUERIDA">
+                                    <p:ajax process="@this"/>
+                                </p:inputText>
+                            </p:column>
+                            <p:message for="uPerf"/>
+                        </p:row>
+                        <p:row>
+                            <p:column style="font-weight: bold;" styleClass="col30-right">
+                                <p:outputLabel id="uNom" value="Nombres:"/>
+                            </p:column>
+                            <p:column styleClass="col40-left">
+                                <p:inputText value="#{usuarioController.usuarioSel.usuNombre}"
+                                             required="true" requiredMessage="Contraseña REQUERIDA">
+                                    <p:ajax process="@this"/>
+                                </p:inputText>
+                            </p:column>
+                            <p:message for="uPerf"/>
+                        </p:row>
+                        <p:row>
+                            <p:column style="font-weight: bold;" styleClass="col30-right">
+                                <p:outputLabel id="uNick" value="Nick/Usuario:"/>
+                            </p:column>
+                            <p:column styleClass="col40-left">
+                                <p:inputText value="#{usuarioController.usuarioSel.usuNick}"
+                                             required="true" requiredMessage="Contraseña REQUERIDA">
+                                    <p:ajax process="@this"/>
+                                </p:inputText>
+                            </p:column>
+                            <p:message for="uPerf"/>
+                        </p:row>
+                        <p:row>
+                            <p:column style="font-weight: bold;" styleClass="col30-right">
+                                <p:outputLabel id="uMail" value="e-Mail:"/>
+                            </p:column>
+                            <p:column styleClass="col40-left">
+                                <p:inputText value="#{usuarioController.usuarioSel.usuMail}"
+                                             required="true" requiredMessage="Contraseña REQUERIDA">
+                                    <p:ajax process="@this"/>
+                                </p:inputText>
+                            </p:column>
+                            <p:message for="uPerf"/>
+                        </p:row>
+                        <p:row>
+                            <p:column style="font-weight: bold;" styleClass="col30-right">
+                                <p:outputLabel id="uAct" value="Activo/Inactivo:"/>
+                            </p:column>
+                            <p:column styleClass="col40-left">
+                                <p:selectBooleanCheckbox value="#{usuarioController.usuarioSel.usuActivo}"
+                                                         process="@this">
+                                    <p:ajax update="uCheckAct"/>
+                                </p:selectBooleanCheckbox>
+                                <p:outputLabel id="uCheckAct"
+                                               value="#{usuarioController.usuarioSel.usuActivo?'Activo':'Inactivo'}"
+                                               process="@this"/>
+                            </p:column>
+                            <p:message for="uPerf"/>
+                        </p:row>
+                        <p:row>
+                            <p:column style="font-weight: bold;" styleClass="col30-right">
+                                <p:commandButton value="Actualizar" action="#{usuarioController.updateUser()}"
+                                                 update=":userForm:msgs,:userForm:userTable" process="@this"/>
+                            </p:column>
+                            <p:column styleClass="col40-left">
+                                <p:commandLink value="Cancelar" oncomplete="PF('userEditWgt').hide()"/>
+                            </p:column>
+                            <p:message for="uPerf"/>
+                        </p:row>
+                    </p:panelGrid>
+                </p:outputPanel>
+            </p:dialog>
+
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

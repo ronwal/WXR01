@@ -5,8 +5,10 @@ import ec.fecuador.persistence.factecuador.data.entities.*;
 import ec.fecuador.persistence.factecuador.generic.common.AbstractJPADao;
 import ec.fecuador.persistence.factecuador.generic.operation.FacElectOpDAO;
 
+import javax.swing.*;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Walter on 20/2/17.
@@ -89,6 +91,11 @@ public class FacElectOpDAOImpl extends AbstractJPADao implements FacElectOpDAO {
     @Override
     public List<EmpresaEntity> getEmpbyNomb(String nombEmp) {
         return this.empresaDAO.getEmpbyNomb(nombEmp);
+    }
+
+    @Override
+    public EmpresaEntity getEmpbyId(String codEmpresa) {
+        return this.empresaDAO.getEmpbyId(codEmpresa);
     }
 
     @Override
@@ -267,6 +274,21 @@ public class FacElectOpDAOImpl extends AbstractJPADao implements FacElectOpDAO {
     }
 
     @Override
+    public UsuarioEntity getUserById(Integer idUser) {
+        return this.usuarioDAO.getUserById(idUser);
+    }
+
+    @Override
+    public List<UsuarioEntity> getAllUserLazyPag(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String, Object> filters) {
+        return this.usuarioDAO.getAllUserLazyPag(first, pageSize, sortField, sortOrder, filters);
+    }
+
+    @Override
+    public Long getCountUserLazyPag(Map<String, Object> filters) {
+        return this.usuarioDAO.getUserCount(filters);
+    }
+
+    @Override
     public UsuarioEntity getAUser(String userName, String userPass, String empCod) {
         return this.usuarioDAO.getAUser(userName, userPass, empCod);
     }
@@ -284,6 +306,11 @@ public class FacElectOpDAOImpl extends AbstractJPADao implements FacElectOpDAO {
     @Override
     public void eliminarUser(UsuarioEntity objEntidad) {
         this.usuarioDAO.eliminarUser(objEntidad);
+    }
+
+    @Override
+    public void actualizarUser(UsuarioEntity objEntidad) {
+        this.usuarioDAO.actualizarUser(objEntidad);
     }
 
     @Override

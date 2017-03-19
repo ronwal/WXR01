@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="../templates/template_login.xhtml">
+    <ui:define name="pageContent">
+        <h:form id="cargaForm">
+            <p:growl id="msgs" showDetail="true"/>
+            <p:panelGrid columns="1" style="width: 90%; text-align: left; margin-left: 3%;">
+                <div style="text-align: center;">
+                    <h3><p:outputLabel style="font-size: 18px;" value="DOCUMENTOS CARGADOS"/></h3>
+                </div>
+                <p:outputPanel>
+                    <p:tabView dynamic="true" cache="true">
+                        <p:tab>
+                            <f:facet name="title">
+                                <p:graphicImage value="/style/images/logo-f.png" width="25px" height="25px"/>
+                                <h:outputText value="Facturas"/>
+                            </f:facet>
+                            <p:panel>
+                                <ui:include src="documentos/facturas.xhtml"/>
+                            </p:panel>
+                        </p:tab>
+                        <p:tab>
+                            <f:facet name="title">
+                                <p:graphicImage value="/style/images/logo-cr.png" width="25px" height="25px"/>
+                                <h:outputText value="Comprobantes Retención"/>
+                            </f:facet>
+                            <h:panelGrid columns="2" cellpadding="10">
+                                <p:graphicImage
+                                        name="http://www.primefaces.org/showcase/javax.faces.resource/demo/images/godfather/godfather2.jpg"/>
+                                <h:outputText value="Francis Ford Coppola's legendary..."/>
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab>
+                            <f:facet name="title">
+                                <p:graphicImage value="/style/images/logo-nc.png" width="25px" height="25px"/>
+                                <h:outputText value="Notas Crédito"/>
+                            </f:facet>
+                            <h:panelGrid columns="2" cellpadding="10">
+                                <p:graphicImage
+                                        name="http://www.primefaces.org/showcase/javax.faces.resource/demo/images/godfather/godfather3.jpg"/>
+                                <h:outputText value="After a break of more than 15 years..."/>
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab>
+                            <f:facet name="title">
+                                <p:graphicImage value="/style/images/logo-nd.png" width="25px" height="25px"/>
+                                <h:outputText value="Notas Débito"/>
+                            </f:facet>
+                            <h:panelGrid columns="2" cellpadding="10">
+                                <p:graphicImage
+                                        name="http://www.primefaces.org/showcase/javax.faces.resource/demo/images/godfather/godfather3.jpg"/>
+                                <h:outputText value="After a break of more than 15 years..."/>
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab>
+                            <f:facet name="title">
+                                <p:graphicImage value="/style/images/logo-gr.png" width="25px" height="25px"/>
+                                <h:outputText value="Guía Remisión"/>
+                            </f:facet>
+                            <h:panelGrid columns="2" cellpadding="10">
+                                <p:graphicImage
+                                        name="http://www.primefaces.org/showcase/javax.faces.resource/demo/images/godfather/godfather3.jpg"/>
+                                <h:outputText value="After a break of more than 15 years..."/>
+                            </h:panelGrid>
+                        </p:tab>
+                    </p:tabView>
+                </p:outputPanel>
+            </p:panelGrid>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

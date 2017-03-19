@@ -10,6 +10,21 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class SessionCookie {
 
+    public static Object getValCookie(String nameSessCook) {
+        return FacesContext.getCurrentInstance().getExternalContext()
+                .getSessionMap().get(nameSessCook);
+    }
+
+    public static void setValCookie(String nameSessCook, Object SessCook) {
+        FacesContext.getCurrentInstance().getExternalContext()
+                .getSessionMap()
+                .put(nameSessCook, SessCook);
+    }
+
+    public static void remValCookie(String nameSessCook) {
+        FacesContext.getCurrentInstance().getExternalContext().getSessionMap().remove(nameSessCook);
+    }
+
     public void setCookie(String name, String value, int expiry) {
 
         FacesContext facesContext = FacesContext.getCurrentInstance();

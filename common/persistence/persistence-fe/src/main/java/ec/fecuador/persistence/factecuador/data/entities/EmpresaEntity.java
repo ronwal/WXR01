@@ -1,6 +1,7 @@
 package ec.fecuador.persistence.factecuador.data.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
@@ -8,7 +9,8 @@ import java.util.Collection;
  */
 @Entity
 @Table(name = "empresa", schema = "public", catalog = "factura_ecuador")
-public class EmpresaEntity {
+public class EmpresaEntity implements Serializable {
+
     private String empCodigo;
     private String empDireccion;
     private String empMail;
@@ -75,7 +77,17 @@ public class EmpresaEntity {
     @Basic
     @Column(name = "emp_url", nullable = true, length = 50)
     public String getEmpUrl() {
-        return empUrl;
+        String url = "#";
+        try {
+            if (this.empUrl != null) {
+                if (this.empUrl.startsWith("http://")) {
+                    url = this.empUrl;
+                } else
+                    url = "http://" + this.empUrl;
+            }
+        } finally {
+            return url;
+        }
     }
 
     public void setEmpUrl(String empUrl) {

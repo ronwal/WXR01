@@ -1,6 +1,7 @@
 package ec.fecuador.persistence.factecuador.data.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Collection;
  */
 @Entity
 @Table(name = "tipo", schema = "public", catalog = "factura_ecuador")
-public class TipoEntity {
+public class TipoEntity implements Serializable {
     private String tipCodigo;
     private String tipNombre;
     private Collection<FacturaEntity> facturasByTipCodigo;

@@ -24,25 +24,17 @@ public class Crypt {
     private static transient SecretKey key;
     private static transient AlgorithmParameterSpec paramSpec;
 
-    static {
+    public static synchronized String encrypt(String token, String password) {
         try {
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static synchronized String encrypt(String password, String data) {
-        try {
-
-            KeySpec keySpec = new PBEKeySpec(password.toCharArray(), CryptParams.getSaltBytes(), CryptParams.getIterationCount());
+            KeySpec keySpec = new PBEKeySpec(token.toCharArray(), CryptParams.getSaltBytes(), CryptParams.getIterationCount());
             key = SecretKeyFactory.getInstance(CryptParams.getAlgorithm()).generateSecret(keySpec);
             cipher = Cipher.getInstance(key.getAlgorithm());
             // Prepare the parameters to the cipthers
             paramSpec = new PBEParameterSpec(CryptParams.getSaltBytes(), CryptParams.getIterationCount());
 
             cipher.init(Cipher.ENCRYPT_MODE, key, paramSpec);
-            byte[] utf8 = data.getBytes("UTF-8");
+            byte[] utf8 = password.getBytes("UTF-8");
             byte[] enc = cipher.doFinal(utf8);
             return new String(Base64.encodeBase64(enc));
         } catch (Exception e) {
@@ -51,16 +43,16 @@ public class Crypt {
         return null;
     }
 
-    public static synchronized String decrypt(String password, String encrypted) {
+    public static synchronized String decrypt(String token, String encrypass) {
         try {
-            KeySpec keySpec = new PBEKeySpec(password.toCharArray(), CryptParams.getSaltBytes(), CryptParams.getIterationCount());
+            KeySpec keySpec = new PBEKeySpec(token.toCharArray(), CryptParams.getSaltBytes(), CryptParams.getIterationCount());
             key = SecretKeyFactory.getInstance(CryptParams.getAlgorithm()).generateSecret(keySpec);
             cipher = Cipher.getInstance(key.getAlgorithm());
             // Prepare the parameters to the cipthers
             paramSpec = new PBEParameterSpec(CryptParams.getSaltBytes(), CryptParams.getIterationCount());
 
             cipher.init(Cipher.DECRYPT_MODE, key, paramSpec);
-            byte[] dec = Base64.decodeBase64(encrypted.getBytes());
+            byte[] dec = Base64.decodeBase64(encrypass.getBytes());
             byte[] utf8 = cipher.doFinal(dec);
             return new String(utf8);
         } catch (Exception e) {

@@ -32,41 +32,111 @@
     <div class="container">
         <!-- Header -->
         <div id="header" class="row">
-            <div class="u4">
-                <div class="wrapper">
-                    <h1><a href="#{loginController.homeUrl}"><img
-                            src="#{request.contextPath}/style/images/facturaEcuador.png"
-                            alt="FacturaEcuador" height="100" width="250"/></a></h1>
+            <div class="info">
+                <div class="logo">
+                    <a href="#{empresaController.empresa.empUrl}" target="_new">
+                        <p:graphicImage value="#{util.streamImage}" height="100" width="250">
+                            <f:param name="imgparm" value="#{empresaController.empresa.empCodigo}"/>
+                        </p:graphicImage>
+                    </a>
+                </div>
+                <div class="empresa">
+                    <p:panelGrid style="text-align: left">
+                        <p:row style="text-align: center !important;">
+                            <p:column style="font-weight: bold;" colspan="2"><p:outputLabel
+                                    value="#{empresaController.empresa.empRazonSocial}"/></p:column>
+                        </p:row>
+                        <p:row>
+                            <p:column style="font-weight: bold;"><p:outputLabel value="e-Mail:"/></p:column>
+                            <p:column>
+                                <p:outputLabel value="#{empresaController.empresa.empMail}"/>
+                            </p:column>
+                        </p:row>
+                        <p:row>
+                            <p:column style="font-weight: bold;"><p:outputLabel value="Teléfono:"/></p:column>
+                            <p:column>
+                                <p:outputLabel value="#{empresaController.empresa.empTelefono}"/>
+                            </p:column>
+                        </p:row>
+                        <p:row>
+                            <p:column style="font-weight: bold;"><p:outputLabel value="Dirección:"/></p:column>
+                            <p:column>
+                                <p:outputLabel value="#{empresaController.empresa.empDireccion}"/>
+                            </p:column>
+                        </p:row>
+                    </p:panelGrid>
+                </div>
+                <div class="user">
+                    <p:panelGrid style="text-align: left">
+                        <p:row id="userNomb">
+                            <p:column style="font-weight: bold;"><p:outputLabel value="Nombres:"/></p:column>
+                            <p:column>
+                                <p:outputLabel value="#{empresaController.usuario.usuNombre}"/>
+                            </p:column>
+                        </p:row>
+                        <p:row id="userIde">
+                            <p:column style="font-weight: bold;"><p:outputLabel value="Identificación:"/></p:column>
+                            <p:column>
+                                <p:outputLabel value="#{empresaController.usuario.usuIdentificacion}"/>
+                            </p:column>
+                        </p:row>
+                        <p:row id="userUs">
+                            <p:column style="font-weight: bold;"><p:outputLabel value="Usuario:"/></p:column>
+                            <p:column>
+                                <p:outputLabel value="#{empresaController.usuario.usuNick}"/>
+                            </p:column>
+                        </p:row>
+                        <p:row id="userMail">
+                            <p:column style="font-weight: bold;"><p:outputLabel value="e-Mail:"/></p:column>
+                            <p:column>
+                                <p:outputLabel value="#{empresaController.usuario.usuMail}"/>
+                            </p:column>
+                        </p:row>
+                        <p:row id="userPrf">
+                            <p:column style="font-weight: bold;"><p:outputLabel value="Perfil:"/></p:column>
+                            <p:column>
+                                <p:outputLabel value="#{empresaController.usuario.perfil.prfNombre}"/>
+                            </p:column>
+                        </p:row>
+                        <p:row>
+                            <h:form>
+                                <p:column style="font-weight: bold; text-align: center" colspan="2">
+                                    <p:commandLink value="Cerrar Sesión"
+                                                   action="#{logoutController.cancelarLogin()}"/>
+                                </p:column>
+                            </h:form>
+                        </p:row></p:panelGrid>
                 </div>
             </div>
 
-            <nav id="main-nav" class="u8">
-                <ul class="slimmenu">
-                    <c:forEach items="#{loginController.memuSystem}" var="modules"
-                               varStatus="status">
-                        <li>
-                            <a href="#{loginController.createURL(modules.menuSystemByIdMenu.urlParth,null)}">#{modules.menuSystemByIdMenu.nombreMenu}</a>
-                        </li>
-                    </c:forEach>
-                </ul>
+            <div class="logedHeader">
+                <nav id="main-nav">
+                    <ul class="slimmenu">
+                        <c:forEach items="#{loginController.memuSystem}" var="modules"
+                                   varStatus="status">
+                            <li>
+                                <a href="#{loginController.createURL(modules.menuSystemByIdMenu.urlParth,null)}">#{modules.menuSystemByIdMenu.nombreMenu}</a>
+                            </li>
+                        </c:forEach>
+                    </ul>
 
-                <script type="text/javascript" src="#{request.contextPath}/style/js/jquery.slimmenu.js"></script>
-                <script type="text/javascript" src="#{request.contextPath}/style/js/jquery.easing.min.js"></script>
-                <script type="text/javascript">
-                    $('.slimmenu').slimmenu(
-                        {
-                            resizeWidth: '800',
-                            collapserTitle: 'Main Menu',
-                            animSpeed: 'medium',
-                            indentChildren: true,
-                            childrenIndenter: '&raquo;'
-                        });
-                </script>
+                    <script type="text/javascript"
+                            src="#{request.contextPath}/style/js/jquery.slimmenu.js"></script>
+                    <script type="text/javascript"
+                            src="#{request.contextPath}/style/js/jquery.easing.min.js"></script>
+                    <script type="text/javascript">
+                        $('.slimmenu').slimmenu(
+                            {
+                                resizeWidth: '800',
+                                collapserTitle: 'Main Menu',
+                                animSpeed: 'medium',
+                                indentChildren: true,
+                                childrenIndenter: '&raquo;'
+                            });
+                    </script>
+                </nav>
+            </div>
 
-                <div id="login" class="login">
-                    <p:commandButton value="Iniciar Sesión" onclick="PF('dlgLogin').show();" action="#{loginController.setEmpUsu('')}"/>
-                </div>
-            </nav>
         </div>
     </div>
 </div>
@@ -78,11 +148,8 @@
 <div class="container">
     <!-- Footer -->
     <footer>
-        <p><img src="#{request.contextPath}/style/images/twitter.png" alt="twitter"/>&nbsp;<img
-                src="#{request.contextPath}/style/images/facebook.png" alt="facebook"/>&nbsp;<img
-                src="#{request.contextPath}/style/images/rss.png" alt="rss"/></p>
-        <div style="margin-top:10px;text-align: center;font-size: 11px;color:#3f3f3f;">Con soporte de:</div>
 
+        <div style="margin-top:10px;text-align: center;font-size: 11px;color:#3f3f3f;">Con soporte de:</div>
         <table width="350px" border="0" style="margin-left: auto;margin-right: auto;border-collapse: collapse;">
             <tr>
 
@@ -109,62 +176,5 @@
 
     </footer>
 </div>
-
-<p:dialog id="dlgLogin" widgetVar="dlgLogin" header="Iniciar Sesión" showEffect="clip"
-          modal="true" resizable="false" position="top" style="min-width: 345px; max-width: 350px;">
-    <h:form id="frmlogin">
-        <p:panelGrid style="text-align: center">
-            <p:messages id="messages" showDetail="false" autoUpdate="true" closable="true"
-                        style="margin-left: 0px !important;"/>
-            <p:row>
-                <p:column style="font-weight: bold;"><p:outputLabel value="Empresa:"/></p:column>
-                <p:column>
-                    <p:inputText id="empresaNomb" value="#{loginController.empUsu}" required="true"
-                                 requiredMessage="Debe ingresar un dato de Empresa.">
-                        <p:ajax event="keyup" process="@this" update="frmlogin:lstEmpresa"/>
-                    </p:inputText>
-                </p:column>
-            </p:row>
-            <p:row>
-                <p:column colspan="2">
-                    <p:dataTable id="lstEmpresa" var="empresas" required="true"
-                                 requiredMessage="Debe seleccionar una Empresa."
-                                 style="#{loginController.getEmpresasFactEcu(loginController.empUsu).size()>0?'':'display:none'}"
-                                 value="#{loginController.getEmpresasFactEcu(loginController.empUsu)}"
-                                 selectionMode="single" selection="#{loginController.empSel}" rowKey="#{empresas}"
-                                 paginator="true"
-                                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
-                                 rows="5" paginatorPosition="bottom">
-                        <p:column>
-                            <p:graphicImage value="#{loginController.streamImage}" width="40px" height="20px">
-                                <f:param name="imgparm" value="#{empresas.empCodigo}"/>
-                            </p:graphicImage>
-                        </p:column>
-                        <p:column>
-                            <h:outputText value="#{empresas.empRazonSocial}"/>
-                        </p:column>
-                    </p:dataTable>
-                </p:column>
-            </p:row>
-            <p:row>
-                <p:column style="font-weight: bold;"><p:outputLabel id="uName" value="Usuario:"/></p:column>
-                <p:column><p:inputText value="#{loginController.user}" process="@this" required="true"
-                                       requiredMessage="Usuario REQUERIDO"/></p:column>
-                <p:message for="uName"/>
-            </p:row>
-            <p:row>
-                <p:column style="font-weight: bold;"><p:outputLabel id="uPass" value="Contraseña:"/></p:column>
-                <p:column><p:password value="#{loginController.password}" process="@this" required="true"
-                                      requiredMessage="Contraseña REQUERIDA"/></p:column>
-                <p:message for="uPass"/>
-            </p:row>
-            <p:row>
-                <p:column colspan="2">
-                    <p:commandLink value="Ingresar" action="#{loginController.loginUser()}"/>
-                </p:column>
-            </p:row>
-        </p:panelGrid>
-    </h:form>
-</p:dialog>
 </body>
 </html>

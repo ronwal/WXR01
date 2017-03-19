@@ -1,6 +1,7 @@
 package ec.fecuador.persistence.factecuador.data.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 
 /**
@@ -8,7 +9,7 @@ import java.sql.Date;
  */
 @Entity
 @Table(name = "detalle_menu_system", schema = "public", catalog = "factura_ecuador")
-public class DetalleMenuSystemEntity {
+public class DetalleMenuSystemEntity implements Serializable {
     private Integer idDetalleMenu;
     private Integer idMenu;
     private String prfCodigo;

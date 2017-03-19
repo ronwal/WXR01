@@ -2,8 +2,10 @@ package ec.fecuador.persistence.factecuador.generic.operation;
 
 import ec.fecuador.persistence.factecuador.data.entities.*;
 
+import javax.swing.*;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Walter on 20/2/17.
@@ -37,6 +39,8 @@ public interface FacElectOpDAO {
     public void eliminarEmp(EmpresaEntity objEntidad);
 
     public List<EmpresaEntity> getEmpbyNomb(String nombEmp);
+
+    public EmpresaEntity getEmpbyId(String codEmpresa);
 
     public List<FacturaEntity> getAllFact();
 
@@ -110,9 +114,17 @@ public interface FacElectOpDAO {
 
     public List<UsuarioEntity> getAllUser();
 
+    public UsuarioEntity getUserById(Integer idUser);
+
+    public List<UsuarioEntity> getAllUserLazyPag(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String, Object> filters);
+
+    public Long getCountUserLazyPag(Map<String, Object> filters);
+
     public void insertUser(UsuarioEntity objEntidad);
 
     public void eliminarUser(UsuarioEntity objEntidad);
+
+    public void actualizarUser(UsuarioEntity objEntidad);
 
     public UsuarioEntity getAUser(String userName, String userPass, String empCod);
 

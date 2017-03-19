@@ -14,14 +14,18 @@ import javax.persistence.OneToMany;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.persistence.metamodel.EntityType;
 import javax.persistence.metamodel.Metamodel;
+import javax.swing.*;
 import java.beans.PropertyDescriptor;
 import java.io.Serializable;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author @rw_r
@@ -159,7 +163,81 @@ public class GenericDAOImpl<T, PK extends Serializable> extends AbstractJPADao i
         Root<T> c = q.from(type);
         q.select(c);
         TypedQuery<T> query = em.createQuery(q);
-        query.setFirstResult(firstResult).setMaxResults(maxResult);
+        //pagination
+
+
+        if (maxResult >= 0) {
+            query.setMaxResults(firstResult);
+        }
+        if (firstResult >= 0) {
+            query.setFirstResult(maxResult);
+        }
+        return query.getResultList();
+    }
+
+    /**
+     * Get all object of table
+     *
+     * @return list of result
+     **/
+    public Long getCount(Map<String, Object> filters) {
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Long> q = cb.createQuery(Long.class);
+
+        Root<T> c = q.from(type);
+
+        List<Predicate> predicates = new ArrayList<>();
+        if (filters.size() > 0) {
+            for (Map.Entry<String, Object> entry : filters.entrySet()) {
+                Predicate condition = cb.like(c.get(entry.getKey()), "%" + (String) entry.getValue() + "%");
+                predicates.add(condition);
+            }
+        }
+
+        if (predicates.size() > 0) {
+            q.where(cb.and(predicates.toArray(new Predicate[]{})));
+        }
+
+        q.select(cb.count(c));
+        TypedQuery<Long> query = em.createQuery(q);
+
+        return query.getSingleResult();
+    }
+
+    public List<T> getPaging(int firstResult, int maxResult, String sortField, SortOrder sortOrder, Map<String, Object> filters) {
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<T> q = cb.createQuery(type);
+        Root<T> c = q.from(type);
+
+        List<Predicate> predicates = new ArrayList<>();
+        if (filters.size() > 0) {
+            for (Map.Entry<String, Object> entry : filters.entrySet()) {
+                Predicate condition = cb.like(cb.upper(c.get(entry.getKey())), "%" + ((String) entry.getValue()).toUpperCase() + "%");
+                predicates.add(condition);
+            }
+        }
+
+        if (predicates.size() > 0) {
+            q.where(cb.and(predicates.toArray(new Predicate[]{})));
+        }
+        if (sortField != null)
+            if (sortOrder.equals(SortOrder.ASCENDING)) {
+                q.orderBy(cb.asc(c.get(sortField)));
+            } else if (sortOrder.equals(SortOrder.DESCENDING)) {
+                q.orderBy(cb.desc(c.get(sortField)));
+            }
+
+
+        q.select(c);
+        TypedQuery<T> query = em.createQuery(q);
+
+        //pagination
+        if (maxResult >= 0) {
+            query.setMaxResults(maxResult);
+        }
+        if (firstResult >= 0) {
+            query.setFirstResult(firstResult);
+        }
         return query.getResultList();
     }
 

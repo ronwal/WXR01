@@ -1,6 +1,7 @@
 package ec.fecuador.persistence.factecuador.data.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -8,11 +9,11 @@ import java.util.List;
  */
 @Entity
 @Table(name = "perfil", schema = "public", catalog = "factura_ecuador")
-public class PerfilEntity {
+public class PerfilEntity implements Serializable{
     private String prfCodigo;
     private String prfNombre;
     private List<DetalleMenuSystemEntity> detalleMenuSystem;
-    private List<UsuarioEntity> usuariosByPrfCodigo;
+    private List<UsuarioEntity> usuarios;
 
     @Id
     @Column(name = "prf_codigo", nullable = false, length = 3)
@@ -63,12 +64,12 @@ public class PerfilEntity {
         this.detalleMenuSystem = detalleMenuSystems;
     }
 
-    @OneToMany(mappedBy = "perfilByPrfCodigo")
-    public List<UsuarioEntity> getUsuariosByPrfCodigo() {
-        return usuariosByPrfCodigo;
+    @OneToMany(mappedBy = "perfil")
+    public List<UsuarioEntity> getUsuarios() {
+        return usuarios;
     }
 
-    public void setUsuariosByPrfCodigo(List<UsuarioEntity> usuariosByPrfCodigo) {
-        this.usuariosByPrfCodigo = usuariosByPrfCodigo;
+    public void setUsuarios(List<UsuarioEntity> usuarios) {
+        this.usuarios = usuarios;
     }
 }

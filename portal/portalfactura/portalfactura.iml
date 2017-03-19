@@ -186,11 +186,12 @@
     <orderEntry type="library" name="Maven: org.apache.openjpa:openjpa-persistence:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.as:jboss-as-build-config:7.2.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.directwebremoting:dwr:3.0.2-RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.primefaces:primefaces:6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.primefaces:primefaces:6.1.RC1" level="project" />
     <orderEntry type="library" name="Maven: org.primefaces.themes:flick:1.0.10" level="project" />
     <orderEntry type="module" module-name="persistence-fe" />
     <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.4" level="project" />
     <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.5.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.2.5.RELEASE" level="project" />
@@ -217,7 +218,6 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.6" level="project" />
     <orderEntry type="library" name="Maven: org.postgresql:postgresql:9.4.1212.jre7" level="project" />
     <orderEntry type="module" module-name="security-fe" />
-    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.2" level="project" />
     <orderEntry type="module" module-name="config-fe" />
   </component>
 </module>

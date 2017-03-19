@@ -1,6 +1,7 @@
 package ec.fecuador.persistence.factecuador.data.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
@@ -8,7 +9,10 @@ import java.util.Collection;
  */
 @Entity
 @Table(name = "usuario", schema = "public", catalog = "factura_ecuador")
-public class UsuarioEntity {
+public class UsuarioEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private Integer usuCodigo;
     private Boolean usuActivo;
     private String usuClave;
@@ -20,7 +24,7 @@ public class UsuarioEntity {
     private String prfCodigo;
     private Collection<AuditoriaEntity> auditoriasByUsuCodigo;
     private EmpresaEntity empresaByEmpCodigo;
-    private PerfilEntity perfilByPrfCodigo;
+    private PerfilEntity perfil;
 
     @Id
     @Column(name = "usu_codigo", nullable = false)
@@ -85,7 +89,7 @@ public class UsuarioEntity {
     @Basic
     @Column(name = "usu_nombre", nullable = false, length = 150)
     public String getUsuNombre() {
-        return usuNombre;
+            return usuNombre;
     }
 
     public void setUsuNombre(String usuNombre) {
@@ -168,11 +172,11 @@ public class UsuarioEntity {
 
     @ManyToOne
     @JoinColumn(name = "prf_codigo", referencedColumnName = "prf_codigo")
-    public PerfilEntity getPerfilByPrfCodigo() {
-        return perfilByPrfCodigo;
+    public PerfilEntity getPerfil() {
+        return perfil;
     }
 
-    public void setPerfilByPrfCodigo(PerfilEntity perfilByPrfCodigo) {
-        this.perfilByPrfCodigo = perfilByPrfCodigo;
+    public void setPerfil(PerfilEntity perfil) {
+        this.perfil = perfil;
     }
 }

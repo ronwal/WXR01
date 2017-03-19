@@ -58,5 +58,16 @@ public class FacturaDAOTest extends TestBase {
         System.out.println("NotaCredito tamaño : " + lista.size());
 
     }
+    @Test
+    public void testDecript(){
+        Security sec= null;
+        try {
+            sec = new Security();
+            System.out.println(sec.decrypt("f74b6decaf92a9544f87b99e3259f66983282a91"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(sec.decrypt(""));
+    }
 
 }

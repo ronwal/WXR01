@@ -136,7 +136,7 @@
                                  paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
                                  rows="5" paginatorPosition="bottom">
                         <p:column>
-                            <p:graphicImage value="#{loginController.streamImage}" width="40px" height="20px">
+                            <p:graphicImage value="#{util.streamImage}" width="40px" height="20px">
                                 <f:param name="imgparm" value="#{empresas.empCodigo}"/>
                             </p:graphicImage>
                         </p:column>
@@ -160,7 +160,7 @@
             </p:row>
             <p:row>
                 <p:column colspan="2">
-                    <p:commandLink value="Ingresar" action="#{loginController.loginUser()}"/>
+                    <p:commandLink value="Ingresar" action="#{loginController.loginUser()}" ajax="true"/>
                 </p:column>
             </p:row>
         </p:panelGrid>

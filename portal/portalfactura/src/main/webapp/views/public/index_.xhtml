@@ -42,7 +42,7 @@
                     <p:panelGrid columns="2" columnClasses="col30-right,col40-left">
                         <p:outputLabel>Tipo:</p:outputLabel>
                         <p:selectOneMenu value="#{loginController.docSearch}">
-                            <f:selectItem itemLabel="ELIJA UN DOCUMENTO"/>
+                            <f:selectItem itemLabel="ELIJA UN DOCUMENTO" itemValue="" noSelectionOption="true"/>
                             <f:selectItems value="#{loginController.docsElect}"
                                            var="documentos"
                                            itemLabel="#{documentos.name}"

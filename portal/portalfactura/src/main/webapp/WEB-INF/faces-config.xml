@@ -6,6 +6,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
 
+    <lifecycle>
+        <phase-listener>ec.gob.fecuador.portal.common.session.MyPhaseListener</phase-listener>
+    </lifecycle>
     <application>
         <el-resolver>
             org.springframework.web.jsf.el.SpringBeanFacesELResolver

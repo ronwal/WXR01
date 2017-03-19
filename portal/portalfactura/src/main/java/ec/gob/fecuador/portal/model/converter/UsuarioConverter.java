@@ -1,7 +1,7 @@
-package ec.gob.fecuador.portal.common.converter;
+package ec.gob.fecuador.portal.model.converter;
 
-import ec.fecuador.persistence.factecuador.data.dao.EmpresaDAO;
-import ec.fecuador.persistence.factecuador.data.entities.EmpresaEntity;
+import ec.fecuador.persistence.factecuador.data.dao.UsuarioDAO;
+import ec.fecuador.persistence.factecuador.data.entities.UsuarioEntity;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedProperty;
@@ -14,17 +14,17 @@ import javax.faces.convert.FacesConverter;
 /**
  * Created by Walter on 26/2/17.
  */
-@FacesConverter("empresaConverter")
-public class EmpresaConverter implements Converter {
-    @ManagedProperty("#{empresaDAO}")
-    EmpresaDAO empresaDAO;
+@FacesConverter("usuarioConverter")
+public class UsuarioConverter implements Converter {
+    @ManagedProperty("#{usuarioDAO}")
+    UsuarioDAO usuarioDAO;
 
     public Object getAsObject(FacesContext fc, UIComponent uic, String value) {
         if (value != null && value.trim().length() > 0) {
             try {
-                return empresaDAO.getEmpbyId(value);
+                return usuarioDAO.getUserById(Integer.valueOf(value));
             } catch (NumberFormatException e) {
-                throw new ConverterException(new FacesMessage(FacesMessage.SEVERITY_ERROR, "Conversion Error", "Not a valid theme."));
+                throw new ConverterException(new FacesMessage(FacesMessage.SEVERITY_ERROR, "Conversion Error", "Not a valid Entity."));
             }
         } else {
             return null;
@@ -33,13 +33,13 @@ public class EmpresaConverter implements Converter {
 
     public String getAsString(FacesContext fc, UIComponent uic, Object object) {
         if (object != null) {
-            return String.valueOf(((EmpresaEntity) object).getEmpCodigo());
+            return String.valueOf(((UsuarioEntity) object).getUsuCodigo());
         } else {
             return null;
         }
     }
 
-    public void setEmpresaDAO(EmpresaDAO empresaDAO) {
-        this.empresaDAO = empresaDAO;
+    public void setUsuarioDAO(UsuarioDAO usuarioDAO) {
+        this.usuarioDAO = usuarioDAO;
     }
 }

@@ -1,0 +1,67 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition>
+    <div class="ui-fluid">
+        <p:panelGrid columns="4" columnClasses="ui-grid-col-2,ui-grid-col-10,ui-grid-col-2,ui-grid-col-10"
+                     layout="grid" styleClass="ui-panelgrid-blank">
+
+            <p:outputLabel style="font-weight: bold;" styleClass="col-right" value="Tipo:"/>
+            <p:selectOneRadio id="tipoRadio" styleClass="col-left" style="margin: 0px"
+                              value="#{documentosController.tipoRegistro}">
+                <f:selectItem itemValue="#{0}" itemLabel="Todos"/>
+                <f:selectItem itemValue="#{1}" itemLabel="Enviado"/>
+                <f:selectItem itemValue="#{2}" itemLabel="Recibido"/>
+            </p:selectOneRadio>
+
+            <p:outputLabel value=""/>
+            <p:outputLabel value=""/>
+
+            <p:outputLabel style="font-weight: bold;" styleClass="col-right" value="Desde:"/>
+            <p:calendar styleClass="col-left" id="fechDesde" value="#{documentosController.fechDesde}" showOn="button"/>
+
+            <p:outputLabel style="font-weight: bold;" styleClass="col-right" value="Hasta:"/>
+            <p:calendar id="fechHasta" styleClass="col-left" value="#{documentosController.fechHasta}" showOn="button"/>
+
+            <p:outputLabel style="font-weight: bold;" styleClass="col-right" value="RUC/Razón Social:"/>
+            <p:inputText styleClass="col-left" value="#{documentosController.empresaRazSoc}"/>
+
+            <p:outputLabel style="font-weight: bold;" styleClass="col-right" value="Secuencial:"/>
+            <p:inputText styleClass="col-left" value="#{documentosController.secuencialDoc}"/>
+        </p:panelGrid>
+        <p:panelGrid columns="1">
+            <p:dataTable id="userTable" value="#{dataUserLazy.model}" var="usvar"
+                         currentPageReportTemplate="Reg.: {startRecord} - {endRecord} de {totalRecords}, Pag. {currentPage} de {totalPages}"
+                         paginatorTemplate="{RowsPerPageDropdown} {CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+                         paginator="true" rows="15" rowsPerPageTemplate="15,50,75,100"
+                         paginatorPosition="bottom"
+                         selectionMode="single" rowKey="#{usvar.usuCodigo}" lazy="true" process="@this">
+
+                <p:ajax event="rowSelect" listener="#{usuarioController.onRowSelect}"/>
+                <p:ajax event="rowUnselect" listener="#{usuarioController.onRowUnselect}"/>
+
+                <p:column headerText="Cedula" sortBy="#{usvar.usuIdentificacion}"
+                          filterBy="#{usvar.usuIdentificacion}">
+                    <h:outputText value="#{usvar.usuIdentificacion}"/>
+                </p:column>
+                <p:column headerText="Nombres" sortBy="#{usvar.usuNombre}" filterBy="#{usvar.usuNombre}"
+                          filterMatchMode="contains" priority="1">
+                    <h:outputText value="#{usvar.usuNombre}"/>
+                </p:column>
+                <p:column headerText="Usuario" sortBy="#{usvar.usuNick}" filterBy="#{usvar.usuNick}"
+                          filterMatchMode="contains" priority="3">
+                    <h:outputText value="#{usvar.usuNick}"/>
+                </p:column>
+                <p:column headerText="Perfil" sortBy="#{usvar.prfCodigo}" priority="3">
+                    <h:outputText value="#{usvar.perfil.prfNombre}"/>
+                </p:column>
+                <p:column headerText="Estado" sortBy="#{usvar.usuActivo}" priority="2">
+                    <h:outputText value="#{usvar.usuActivo?'Activo':'Inactivo'}"/>
+                </p:column>
+            </p:dataTable>
+        </p:panelGrid>
+    </div>
+</ui:composition>
+</html>
