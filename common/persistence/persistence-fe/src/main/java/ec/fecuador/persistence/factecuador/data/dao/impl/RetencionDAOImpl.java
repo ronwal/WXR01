@@ -14,15 +14,17 @@ public class RetencionDAOImpl extends GenericDAOImpl<RetencionEntity, Integer> i
         super(RetencionEntity.class);
     }
 
+    @Override
     public List<RetencionEntity> getAllRetenc() {
         return getAll();
     }
 
+    @Override
     public void insertRetenc(RetencionEntity objEntidad) {
         create(objEntidad);
     }
 
-
+    @Override
     public void eliminarRetenc(RetencionEntity objEntidad) {
         delete(objEntidad);
     }

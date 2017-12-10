@@ -44,7 +44,7 @@ public class FacturaDAOTest extends TestBase {
         List<DetalleMenuSystemEntity> entities = perfilEntity.getDetalleMenuSystem();
         entities.
                 forEach(item -> System.out.println(item.getMenuSystemByIdMenu().getNombreMenu()));
-        System.out.println("FacturaDAO tamaño : " + entities.size());
+        System.out.println("Menu Size: " + entities.size());
     }
 
     @Test

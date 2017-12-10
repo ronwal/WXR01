@@ -19,11 +19,14 @@
         <class>ec.fecuador.persistence.factecuador.data.entities.DetalleMenuSystemEntity</class>
         <class>ec.fecuador.persistence.factecuador.data.entities.MenuSystemEntity</class>
         <properties>
+            <property name="jboss.as.jpa.providerModule" value="org.apache.openjpa"/>
+            <property name="openjpa.MetaDataFactory" value="jpa"/>
+
             <property name="openjpa.RuntimeUnenhancedClasses" value="supported"/>
             <property name="openjpa.jdbc.SchemaFactory" value="native(ForeignKeys=true)"/>
             <property name="openjpa.jdbc.MappingDefaults"
                       value="ForeignKeyDeleteAction=restrict, JoinForeignKeyDeleteAction=restrict"/>
-            <property name="openjpa.Compatibility" value="CheckDatabaseForCascadePersistToDetachedEntity=true"/>
+            <property name="openjpa.Compatibility" value="CheckDatabaseForCascadePersistToDetachedEntity=*true*"/>
             <property name="openjpa.jdbc.DBDictionary" value="sqlserver(UniqueIdentifierAsVarbinary=false)"/>
             <property name="openjpa.Multithreaded" value="false"/>
             <property name="openjpa.Optimistic" value="false"/>
@@ -31,8 +34,6 @@
             <property name="openjpa.ConnectionFactoryMode" value="local"/>
             <property name="openjpa.LockManager" value="none"/>
             <property name="openjpa.Log" value="DefaultLevel=ERROR, Runtime=ERROR, Tool=ERROR, SQL=ERROR"/>
-            <property name="openjpa.ConnectionURL" value="jdbc:postgresql://localhost:5432/factura_ecuador"/>
-            <property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver"/>
         </properties>
     </persistence-unit>
 </persistence>

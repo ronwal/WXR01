@@ -8,16 +8,16 @@ import java.util.List;
  * Created by @rw_r on 25/2/16.
  */
 public interface PerfilDAO {
-    public static String BEAN_NAME = "perfilDAO";
+     static String BEAN_NAME = "perfilDAO";
 
-    public List<PerfilEntity> getAllPerfil();
+     List<PerfilEntity> getAllPerfil();
 
-    public void insertPerfil(PerfilEntity objEntidad);
+     void insertPerfil(PerfilEntity objEntidad);
 
-    public void eliminarPerfil(PerfilEntity objEntidad);
+     void eliminarPerfil(PerfilEntity objEntidad);
 
-    public PerfilEntity getPerfilByCodPrf(String codPerfil);
+     PerfilEntity getPerfilByCodPrf(String codPerfil);
 
-    public Object lazyLoad(Class<?> clazz, Object entity);
+     Object lazyLoad(Class<?> clazz, Object entity);
 
 }

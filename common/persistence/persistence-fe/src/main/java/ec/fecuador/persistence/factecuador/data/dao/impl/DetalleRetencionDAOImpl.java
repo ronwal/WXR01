@@ -14,15 +14,17 @@ public class DetalleRetencionDAOImpl extends GenericDAOImpl<DetalleRetencionEnti
         super(DetalleRetencionEntity.class);
     }
 
+    @Override
     public List<DetalleRetencionEntity> getAllDetRet() {
         return getAllDetRet();
     }
 
+    @Override
     public void insertDetRet(DetalleRetencionEntity objEntidad) {
         create(objEntidad);
     }
 
-
+    @Override
     public void eliminarDetRet(DetalleRetencionEntity objEntidad) {
         delete(objEntidad);
     }

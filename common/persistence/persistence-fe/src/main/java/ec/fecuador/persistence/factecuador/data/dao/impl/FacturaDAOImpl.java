@@ -28,14 +28,17 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         return getPaging(firstResult, maxResult);
     }
 
+    @Override
     public void insertFact(FacturaEntity objEntidad) {
         create(objEntidad);
     }
 
+    @Override
     public void eliminarFact(FacturaEntity objEntidad) {
         delete(objEntidad);
     }
 
+    @Override
     public FacturaEntity findFacturaByPrimaryKey(Integer facCodigo) throws Exception {
         FacturaEntity facturaEntity = null;
         try {
@@ -48,6 +51,7 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         }
     }
 
+    @Override
     public FacturaEntity findFacturaByInfo(String emisor, String receptor, String establecimiento, String ptoEmision, int secuencial) throws Exception {
         FacturaEntity facturaEntity = null;
         try {
@@ -72,6 +76,7 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         }
     }
 
+    @Override
     public List<FacturaEntity> filterByFacRazonSocialComprador(String filter, int maxResults) throws Exception {
         List<FacturaEntity> facturaEntities = null;
         try {
@@ -88,10 +93,12 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         }
     }
 
+    @Override
     public List<FacturaEntity> filterByFacRazonSocialComprador(String filter) throws Exception {
         return filterByFacRazonSocialComprador(filter, 50);
     }
 
+    @Override
     public List<FacturaEntity> filterByEmpresa(EmpresaEntity empresa) throws Exception {
         List<FacturaEntity> facturaEntities = null;
         try {
@@ -107,6 +114,7 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         }
     }
 
+    @Override
     public List<FacturaEntity> filterByEmpresa(String empCodigo) throws Exception {
         List<FacturaEntity> facturaEntities = null;
         try {
@@ -122,6 +130,7 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         }
     }
 
+    @Override
     public List<FacturaEntity> filterByTipo(TipoEntity tipo) throws Exception {
         List<FacturaEntity> facturaEntities = null;
         try {
@@ -137,6 +146,7 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         }
     }
 
+    @Override
     public List<FacturaEntity> filterByTipo(String tipCodigo) throws Exception {
         List<FacturaEntity> facturaEntities = null;
         try {
@@ -152,6 +162,7 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         }
     }
 
+    @Override
     public List<FacturaEntity> personalizedFilter(EmpresaEntity empresa, TipoEntity tipo) throws Exception {
         List<FacturaEntity> facturaEntities = null;
         try {
@@ -169,6 +180,7 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         }
     }
 
+    @Override
     public boolean checkIsRegistered(FacturaEntity factEnt) throws Exception {
         boolean bn_ = false;
         try {
@@ -191,6 +203,7 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         }
     }
 
+    @Override
     public Date getFirstDate(EmpresaEntity e) {
         Date date_ = new Date();
         try {
@@ -210,6 +223,7 @@ public class FacturaDAOImpl extends GenericDAOImpl<FacturaEntity, Integer> imple
         }
     }
 
+    @Override
     public double getResumeData(EmpresaEntity empresa, TipoEntity tipo, Date inicio, Date fin) throws Exception {
         try {
             String sql = "SELECT SUM(a.facTotalSinImpuestos) as total " +

@@ -8,12 +8,12 @@ import java.util.List;
  * Created by @rw_r on 25/2/16.
  */
 public interface NotaCreditoDAO {
-    public static String BEAN_NAME = "notaCreditoDAO";
+     static String BEAN_NAME = "notaCreditoDAO";
 
-    public List<NotaCreditoEntity> getAllNotaCred();
+     List<NotaCreditoEntity> getAllNotaCred();
 
-    public void insertNotaCred(NotaCreditoEntity objEntidad);
+     void insertNotaCred(NotaCreditoEntity objEntidad);
 
-    public void eliminarNotaCred(NotaCreditoEntity objEntidad);
+     void eliminarNotaCred(NotaCreditoEntity objEntidad);
 
 }

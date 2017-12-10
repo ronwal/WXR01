@@ -111,5 +111,4 @@
     <bean id="retencionDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.RetencionDAOImpl"/>
     <bean id="tipoDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.TipoDAOImpl"/>
     <bean id="usuarioDAO" class="ec.fecuador.persistence.factecuador.data.dao.impl.UsuarioDAOImpl"/>
-
 </beans>

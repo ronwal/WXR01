@@ -59,11 +59,11 @@ public class LoginController {
         String sessPRF = (String) SessionCookie.getValCookie(PRFL_USER);
         PerfilEntity perfilEntity;
         if (sessPRF != null) {
-            perfilEntity = facElectOpDAO.getPerfilByCodPrf(sessPRF);
+            perfilEntity = this.facElectOpDAO.getPerfilByCodPrf(sessPRF);
         } else {
-            perfilEntity = facElectOpDAO.getPerfilByCodPrf(PERFIL_INVITADO);
+            perfilEntity = this.facElectOpDAO.getPerfilByCodPrf(PERFIL_INVITADO);
         }
-        perfilEntity = (PerfilEntity) facElectOpDAO.lazyLoad(PerfilEntity.class, perfilEntity);
+        perfilEntity = (PerfilEntity) this.facElectOpDAO.lazyLoad(PerfilEntity.class, perfilEntity);
         systemEntities = perfilEntity.getDetalleMenuSystem();
         return systemEntities;
     }
@@ -71,10 +71,10 @@ public class LoginController {
     public String loginUser() {
         String url = "";
         try {
-            UsuarioEntity user_ = facElectOpDAO.getAUser(user, empSel.getEmpCodigo());
+            UsuarioEntity user_ = this.facElectOpDAO.getAUser(user, empSel.getEmpCodigo());
             if (user_ != null) {
                 String tkn = user_.getEmpresaByEmpCodigo() != null ? user_.getEmpresaByEmpCodigo().getEmpCodigo() : user_.getUsuIdentificacion();
-                user_ = facElectOpDAO.getAUser(user, Crypt.encrypt(tkn, password), empSel.getEmpCodigo());
+                user_ = this.facElectOpDAO.getAUser(user, Crypt.encrypt(tkn, password), empSel.getEmpCodigo());
                 if (user_ != null)
                     if (user_.getUsuActivo()) {
                         url = "views/empresa/index.xhtml";
@@ -108,10 +108,9 @@ public class LoginController {
             if (user_ == null) {
                 FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Usuario no Registrado o Contraseña Incorrecta.", ""));
             }
-
-        } finally {
-            return url;
+        } catch (Exception ex) {
         }
+        return url;
 
     }
 
@@ -133,7 +132,7 @@ public class LoginController {
         if (rasSoc.isEmpty())
             return null;
         else
-            return facElectOpDAO.getEmpbyNomb(rasSoc.trim().toUpperCase());
+            return this.facElectOpDAO.getEmpbyNomb(rasSoc.trim().toUpperCase());
     }
 
     public HttpSession getSession() {

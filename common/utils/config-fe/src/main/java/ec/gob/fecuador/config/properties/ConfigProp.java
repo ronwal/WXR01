@@ -16,7 +16,7 @@ public class ConfigProp {
     private static final Logger LOG = LoggerFactory
             .getLogger(ConfigProp.class);
 
-    private static final String envProp = "ec.gob.mies.configfile";
+    private static final String envProp = "com.factura.ecuador";
 
     private Properties properties = null;
 

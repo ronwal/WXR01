@@ -8,12 +8,12 @@ import java.util.List;
  * Created by @rw_r on 25/2/16.
  */
 public interface RetencionDAO {
-    public static String BEAN_NAME = "retencionDAO";
+     static String BEAN_NAME = "retencionDAO";
 
-    public List<RetencionEntity> getAllRetenc();
+     List<RetencionEntity> getAllRetenc();
 
-    public void insertRetenc(RetencionEntity objEntidad);
+     void insertRetenc(RetencionEntity objEntidad);
 
-    public void eliminarRetenc(RetencionEntity objEntidad);
+     void eliminarRetenc(RetencionEntity objEntidad);
 
 }

@@ -8,12 +8,12 @@ import java.util.List;
  * Created by @rw_r on 25/2/16.
  */
 public interface TipoDAO {
-    public static String BEAN_NAME = "tipoDAO";
+     static String BEAN_NAME = "tipoDAO";
 
-    public List<TipoEntity> getAllTipo();
+     List<TipoEntity> getAllTipo();
 
-    public void insertTipo(TipoEntity objEntidad);
+     void insertTipo(TipoEntity objEntidad);
 
-    public void eliminarTipo(TipoEntity objEntidad);
+     void eliminarTipo(TipoEntity objEntidad);
 
 }

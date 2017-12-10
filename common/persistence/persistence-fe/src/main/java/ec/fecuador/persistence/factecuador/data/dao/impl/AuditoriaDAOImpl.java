@@ -14,15 +14,17 @@ public class AuditoriaDAOImpl extends GenericDAOImpl<AuditoriaEntity, Integer> i
         super(AuditoriaEntity.class);
     }
 
+    @Override
     public List<AuditoriaEntity> getAllAuditEnt() {
         return getAllAuditEnt();
     }
 
+    @Override
     public void insertAuditEnt(AuditoriaEntity objEntidad) {
         create(objEntidad);
     }
 
-
+    @Override
     public void eliminarAuditEnt(AuditoriaEntity objEntidad) {
         delete(objEntidad);
     }

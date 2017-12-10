@@ -10,23 +10,23 @@ import java.util.Map;
  * Created by @rw_r on 25/2/16.
  */
 public interface UsuarioDAO {
-    public static String BEAN_NAME = "usuarioDAO";
+     static String BEAN_NAME = "usuarioDAO";
 
-    public List<UsuarioEntity> getAllUser();
+     List<UsuarioEntity> getAllUser();
 
-    public void insertUser(UsuarioEntity objEntidad);
+     void insertUser(UsuarioEntity objEntidad);
 
-    public void eliminarUser(UsuarioEntity objEntidad);
+     void eliminarUser(UsuarioEntity objEntidad);
 
-    public void actualizarUser(UsuarioEntity objEntidad);
+     void actualizarUser(UsuarioEntity objEntidad);
 
-    public UsuarioEntity getAUser(String userName, String userPass, String empCod);
+     UsuarioEntity getAUser(String userName, String userPass, String empCod);
 
-    public UsuarioEntity getUserById(Integer idUser);
+     UsuarioEntity getUserById(Integer idUser);
 
-    public UsuarioEntity getAUser(String userName, String empCod);
+     UsuarioEntity getAUser(String userName, String empCod);
 
-    public List<UsuarioEntity> getAllUserLazyPag(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String, Object> filters);
+     List<UsuarioEntity> getAllUserLazyPag(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String, Object> filters);
 
-    public Long getUserCount(Map<String, Object> filters);
+     Long getUserCount(Map<String, Object> filters);
 }

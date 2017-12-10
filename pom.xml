@@ -30,6 +30,10 @@
         <servlet.jsp.version>2.1</servlet.jsp.version>
         <jasperreports.version>5.2.0</jasperreports.version>
 
+        <postgre.version>42.1.4</postgre.version>
+
+        <java.jdk.version>1.8</java.jdk.version>
+
         <kotlin.version>1.0.6</kotlin.version>
 
         <cxf.version>3.1.8</cxf.version>

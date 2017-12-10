@@ -12,123 +12,121 @@ import java.util.Map;
  */
 public interface FacElectOpDAO {
 
-    public static final String BEAN_NAME = "facElectOpDAO";
+     List<AuditoriaEntity> getAllAuditEnt();
 
-    public List<AuditoriaEntity> getAllAuditEnt();
+     void insertAuditEnt(AuditoriaEntity objEntidad);
 
-    public void insertAuditEnt(AuditoriaEntity objEntidad);
+     void eliminarAuditEnt(AuditoriaEntity objEntidad);
 
-    public void eliminarAuditEnt(AuditoriaEntity objEntidad);
+     List<DetalleAuditoriaEntity> getAllDetAut();
 
-    public List<DetalleAuditoriaEntity> getAllDetAut();
+     void insertDetAut(DetalleAuditoriaEntity objEntidad);
 
-    public void insertDetAut(DetalleAuditoriaEntity objEntidad);
+     void eliminarDetAut(DetalleAuditoriaEntity objEntidad);
 
-    public void eliminarDetAut(DetalleAuditoriaEntity objEntidad);
+     List<DetalleRetencionEntity> getAllDetRet();
 
-    public List<DetalleRetencionEntity> getAllDetRet();
+     void insertDetRet(DetalleRetencionEntity objEntidad);
 
-    public void insertDetRet(DetalleRetencionEntity objEntidad);
+     void eliminarDetRet(DetalleRetencionEntity objEntidad);
 
-    public void eliminarDetRet(DetalleRetencionEntity objEntidad);
+     List<EmpresaEntity> getAllEmp();
 
-    public List<EmpresaEntity> getAllEmp();
+     void insertEmp(EmpresaEntity objEntidad);
 
-    public void insertEmp(EmpresaEntity objEntidad);
+     void eliminarEmp(EmpresaEntity objEntidad);
 
-    public void eliminarEmp(EmpresaEntity objEntidad);
+     List<EmpresaEntity> getEmpbyNomb(String nombEmp);
 
-    public List<EmpresaEntity> getEmpbyNomb(String nombEmp);
+     EmpresaEntity getEmpbyId(String codEmpresa);
 
-    public EmpresaEntity getEmpbyId(String codEmpresa);
+     List<FacturaEntity> getAllFact();
 
-    public List<FacturaEntity> getAllFact();
+     void insertFact(FacturaEntity objEntidad);
 
-    public void insertFact(FacturaEntity objEntidad);
+     void eliminarFact(FacturaEntity objEntidad);
 
-    public void eliminarFact(FacturaEntity objEntidad);
+     FacturaEntity findFacturaByPrimaryKey(Integer facCodigo) throws Exception;
 
-    public FacturaEntity findFacturaByPrimaryKey(Integer facCodigo) throws Exception;
+     FacturaEntity findFacturaByInfo(String emisor, String receptor, String establecimiento, String ptoEmision, int secuencial) throws Exception;
 
-    public FacturaEntity findFacturaByInfo(String emisor, String receptor, String establecimiento, String ptoEmision, int secuencial) throws Exception;
+     List<FacturaEntity> filterByFacRazonSocialComprador(String filter, int maxResults) throws Exception;
 
-    public List<FacturaEntity> filterByFacRazonSocialComprador(String filter, int maxResults) throws Exception;
+     List<FacturaEntity> filterByFacRazonSocialComprador(String filter) throws Exception;
 
-    public List<FacturaEntity> filterByFacRazonSocialComprador(String filter) throws Exception;
+     List<FacturaEntity> filterByEmpresa(EmpresaEntity empresa) throws Exception;
 
-    public List<FacturaEntity> filterByEmpresa(EmpresaEntity empresa) throws Exception;
+     List<FacturaEntity> filterByEmpresa(String empCodigo) throws Exception;
 
-    public List<FacturaEntity> filterByEmpresa(String empCodigo) throws Exception;
+     List<FacturaEntity> filterByTipo(TipoEntity tipo) throws Exception;
 
-    public List<FacturaEntity> filterByTipo(TipoEntity tipo) throws Exception;
+     List<FacturaEntity> filterByTipo(String tipCodigo) throws Exception;
 
-    public List<FacturaEntity> filterByTipo(String tipCodigo) throws Exception;
+     List<FacturaEntity> personalizedFilter(EmpresaEntity empresa, TipoEntity tipo) throws Exception;
 
-    public List<FacturaEntity> personalizedFilter(EmpresaEntity empresa, TipoEntity tipo) throws Exception;
+     boolean checkIsRegistered(FacturaEntity f) throws Exception;
 
-    public boolean checkIsRegistered(FacturaEntity f) throws Exception;
+     Date getFirstDate(EmpresaEntity e);
 
-    public Date getFirstDate(EmpresaEntity e);
+    // List<FacturaEntity> personalizedFilter(LoginController login, EmpresaEntity empresa, int tipo, Date desde, Date hasta, String filtro, String secuencial, int limit);
 
-    //public List<FacturaEntity> personalizedFilter(LoginController login, EmpresaEntity empresa, int tipo, Date desde, Date hasta, String filtro, String secuencial, int limit);
+     double getResumeData(EmpresaEntity empresa, TipoEntity tipo, Date inicio, Date fin) throws Exception;
 
-    public double getResumeData(EmpresaEntity empresa, TipoEntity tipo, Date inicio, Date fin) throws Exception;
+     List<GuiaRemisionEntity> getAllGuiaRem();
 
-    public List<GuiaRemisionEntity> getAllGuiaRem();
+     void insertGuiaRem(GuiaRemisionEntity objEntidad);
 
-    public void insertGuiaRem(GuiaRemisionEntity objEntidad);
+     void eliminarGuiaRem(GuiaRemisionEntity objEntidad);
 
-    public void eliminarGuiaRem(GuiaRemisionEntity objEntidad);
+     List<NotaCreditoEntity> getAllNotaCred();
 
-    public List<NotaCreditoEntity> getAllNotaCred();
+     void insertNotaCred(NotaCreditoEntity objEntidad);
 
-    public void insertNotaCred(NotaCreditoEntity objEntidad);
+     void eliminarNotaCred(NotaCreditoEntity objEntidad);
 
-    public void eliminarNotaCred(NotaCreditoEntity objEntidad);
+     List<NotaDebitoEntity> getAllNotaDeb();
 
-    public List<NotaDebitoEntity> getAllNotaDeb();
+     void insertNotaDeb(NotaDebitoEntity objEntidad);
 
-    public void insertNotaDeb(NotaDebitoEntity objEntidad);
+     void eliminarNotaDeb(NotaDebitoEntity objEntidad);
 
-    public void eliminarNotaDeb(NotaDebitoEntity objEntidad);
+     List<PerfilEntity> getAllPerfil();
 
-    public List<PerfilEntity> getAllPerfil();
+     void insertPerfil(PerfilEntity objEntidad);
 
-    public void insertPerfil(PerfilEntity objEntidad);
+     void eliminarPerfil(PerfilEntity objEntidad);
 
-    public void eliminarPerfil(PerfilEntity objEntidad);
+     PerfilEntity getPerfilByCodPrf(String codPerfil);
 
-    public PerfilEntity getPerfilByCodPrf(String codPerfil);
+     List<RetencionEntity> getAllRetenc();
 
-    public List<RetencionEntity> getAllRetenc();
+     void insertRetenc(RetencionEntity objEntidad);
 
-    public void insertRetenc(RetencionEntity objEntidad);
+     void eliminarRetenc(RetencionEntity objEntidad);
 
-    public void eliminarRetenc(RetencionEntity objEntidad);
+     List<TipoEntity> getAllTipo();
 
-    public List<TipoEntity> getAllTipo();
+     void insertTipo(TipoEntity objEntidad);
 
-    public void insertTipo(TipoEntity objEntidad);
+     void eliminarTipo(TipoEntity objEntidad);
 
-    public void eliminarTipo(TipoEntity objEntidad);
+     List<UsuarioEntity> getAllUser();
 
-    public List<UsuarioEntity> getAllUser();
+     UsuarioEntity getUserById(Integer idUser);
 
-    public UsuarioEntity getUserById(Integer idUser);
+     List<UsuarioEntity> getAllUserLazyPag(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String, Object> filters);
 
-    public List<UsuarioEntity> getAllUserLazyPag(int first, int pageSize, String sortField, SortOrder sortOrder, Map<String, Object> filters);
+     Long getCountUserLazyPag(Map<String, Object> filters);
 
-    public Long getCountUserLazyPag(Map<String, Object> filters);
+     void insertUser(UsuarioEntity objEntidad);
 
-    public void insertUser(UsuarioEntity objEntidad);
+     void eliminarUser(UsuarioEntity objEntidad);
 
-    public void eliminarUser(UsuarioEntity objEntidad);
+     void actualizarUser(UsuarioEntity objEntidad);
 
-    public void actualizarUser(UsuarioEntity objEntidad);
+     UsuarioEntity getAUser(String userName, String userPass, String empCod);
 
-    public UsuarioEntity getAUser(String userName, String userPass, String empCod);
+     UsuarioEntity getAUser(String userName, String empCod);
 
-    public UsuarioEntity getAUser(String userName, String empCod);
-
-    public Object lazyLoad(Class<?> clazz, Object entity);
+     Object lazyLoad(Class<?> clazz, Object entity);
 }

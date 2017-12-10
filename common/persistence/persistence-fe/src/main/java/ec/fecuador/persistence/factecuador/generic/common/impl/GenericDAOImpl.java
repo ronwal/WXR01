@@ -165,12 +165,11 @@ public class GenericDAOImpl<T, PK extends Serializable> extends AbstractJPADao i
         TypedQuery<T> query = em.createQuery(q);
         //pagination
 
-
         if (maxResult >= 0) {
-            query.setMaxResults(firstResult);
+            query.setMaxResults(maxResult);
         }
         if (firstResult >= 0) {
-            query.setFirstResult(maxResult);
+            query.setFirstResult(firstResult);
         }
         return query.getResultList();
     }

@@ -37,7 +37,7 @@
         <p:panelGrid style="text-align: center">
             <h:form>
                 <p:panelGrid columns="1" style="text-align: center;width: 100%; border-collapse: collapse;">
-                    <p:graphicImage value="/style/images/buscar_documento.png" width="64" height="64"/>
+                    <p:graphicImage value="#{request.contextPath}/style/images/buscar_documento.png" width="64" height="64"/>
                     <p:outputLabel>Busque su Documento:</p:outputLabel>
                     <p:panelGrid columns="2" columnClasses="col30-right,col40-left">
                         <p:outputLabel>Tipo:</p:outputLabel>
@@ -63,11 +63,11 @@
                     <p:commandButton value="Buscar"/>
                     <p:panelGrid columns="2" rendered="" cellpadding="5" cellspacing="5">
                         <p:commandLink value="">
-                            <p:graphicImage value="/style/images/pdf.png"/>
+                            <p:graphicImage value="#{request.contextPath}/style/images/pdf.png"/>
                             <p:outputLabel>Generar PDF</p:outputLabel>
                         </p:commandLink>
                         <p:commandLink value="">
-                            <p:graphicImage url="/style/images/download.png"/>
+                            <p:graphicImage url="#{request.contextPath}/style/images/download.png"/>
                             <p:outputLabel>Descargar XML</p:outputLabel>
                         </p:commandLink>
                     </p:panelGrid>

@@ -14,15 +14,17 @@ public class DetalleAuditoriaDAOImpl extends GenericDAOImpl<DetalleAuditoriaEnti
         super(DetalleAuditoriaEntity.class);
     }
 
+    @Override
     public List<DetalleAuditoriaEntity> getAllDetAut() {
         return getAll();
     }
 
+    @Override
     public void insertDetAut(DetalleAuditoriaEntity objEntidad) {
         create(objEntidad);
     }
 
-
+    @Override
     public void eliminarDetAut(DetalleAuditoriaEntity objEntidad) {
         delete(objEntidad);
     }

@@ -8,12 +8,12 @@ import java.util.List;
  * Created by @rw_r on 25/2/16.
  */
 public interface DetalleRetencionDAO {
-    public static String BEAN_NAME = "detalleRetencionDAO";
+     static String BEAN_NAME = "detalleRetencionDAO";
 
-    public List<DetalleRetencionEntity> getAllDetRet();
+     List<DetalleRetencionEntity> getAllDetRet();
 
-    public void insertDetRet(DetalleRetencionEntity objEntidad);
+     void insertDetRet(DetalleRetencionEntity objEntidad);
 
-    public void eliminarDetRet(DetalleRetencionEntity objEntidad);
+     void eliminarDetRet(DetalleRetencionEntity objEntidad);
 
 }

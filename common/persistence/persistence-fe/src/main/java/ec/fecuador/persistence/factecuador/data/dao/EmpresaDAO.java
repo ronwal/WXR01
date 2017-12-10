@@ -8,16 +8,16 @@ import java.util.List;
  * Created by @rw_r on 25/2/16.
  */
 public interface EmpresaDAO {
-    public static String BEAN_NAME = "empresaDAO";
+     static String BEAN_NAME = "empresaDAO";
 
-    public List<EmpresaEntity> getAllEmp();
+     List<EmpresaEntity> getAllEmp();
 
-    public void insertEmp(EmpresaEntity objEntidad);
+     void insertEmp(EmpresaEntity objEntidad);
 
-    public void eliminarEmp(EmpresaEntity objEntidad);
+     void eliminarEmp(EmpresaEntity objEntidad);
 
-    public List<EmpresaEntity> getEmpbyNomb(String nombEmp);
+     List<EmpresaEntity> getEmpbyNomb(String nombEmp);
 
-    public EmpresaEntity getEmpbyId(String codEmpresa);
+     EmpresaEntity getEmpbyId(String codEmpresa);
 
 }

@@ -8,12 +8,12 @@ import java.util.List;
  * Created by @rw_r on 25/2/16.
  */
 public interface GuiaRemisionDAO {
-    public static String BEAN_NAME = "guiaRemisionDAO";
+     static String BEAN_NAME = "guiaRemisionDAO";
 
-    public List<GuiaRemisionEntity> getAllGuiaRem();
+     List<GuiaRemisionEntity> getAllGuiaRem();
 
-    public void insertGuiaRem(GuiaRemisionEntity objEntidad);
+     void insertGuiaRem(GuiaRemisionEntity objEntidad);
 
-    public void eliminarGuiaRem(GuiaRemisionEntity objEntidad);
+     void eliminarGuiaRem(GuiaRemisionEntity objEntidad);
 
 }

@@ -17,6 +17,7 @@ public class UsuarioDAOImpl extends GenericDAOImpl<UsuarioEntity, Integer> imple
         super(UsuarioEntity.class);
     }
 
+    @Override
     public List<UsuarioEntity> getAllUser() {
         return getAll();
     }

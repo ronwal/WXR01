@@ -16,8 +16,8 @@
         <property name="guiaRemisionDAO" ref="guiaRemisionDAO"/>
         <property name="notaCreditoDAO" ref="notaCreditoDAO"/>
         <property name="notaDebitoDAO" ref="notaDebitoDAO"/>
-        <property name="perfilDAO" ref="perfilDAO"/>
         <property name="retencionDAO" ref="retencionDAO"/>
+        <property name="perfilDAO" ref="perfilDAO"/>
         <property name="tipoDAO" ref="tipoDAO"/>
         <property name="usuarioDAO" ref="usuarioDAO"/>
     </bean>

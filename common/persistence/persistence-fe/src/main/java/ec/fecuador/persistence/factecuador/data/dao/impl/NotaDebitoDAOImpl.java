@@ -14,15 +14,17 @@ public class NotaDebitoDAOImpl extends GenericDAOImpl<NotaDebitoEntity, Integer>
         super(NotaDebitoEntity.class);
     }
 
+    @Override
     public List<NotaDebitoEntity> getAllNotaDeb() {
         return getAll();
     }
 
+    @Override
     public void insertNotaDeb(NotaDebitoEntity objEntidad) {
         create(objEntidad);
     }
 
-
+    @Override
     public void eliminarNotaDeb(NotaDebitoEntity objEntidad) {
         delete(objEntidad);
     }

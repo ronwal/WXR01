@@ -14,15 +14,17 @@ public class NotaCreditoDAOImpl extends GenericDAOImpl<NotaCreditoEntity, Intege
         super(NotaCreditoEntity.class);
     }
 
+    @Override
     public List<NotaCreditoEntity> getAllNotaCred() {
         return getAll();
     }
 
+    @Override
     public void insertNotaCred(NotaCreditoEntity objEntidad) {
         create(objEntidad);
     }
 
-
+    @Override
     public void eliminarNotaCred(NotaCreditoEntity objEntidad) {
         delete(objEntidad);
     }
