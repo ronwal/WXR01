@@ -5,13 +5,17 @@
       <module fileurl="file://$PROJECT_DIR$/portal/XMLExplore/XMLExplore.iml" filepath="$PROJECT_DIR$/portal/XMLExplore/XMLExplore.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/utils/config-fe/config-fe.iml" filepath="$PROJECT_DIR$/common/utils/config-fe/config-fe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/portal/docu-send/docu-send.iml" filepath="$PROJECT_DIR$/portal/docu-send/docu-send.iml" />
       <module fileurl="file://$PROJECT_DIR$/facturaecuador.iml" filepath="$PROJECT_DIR$/facturaecuador.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/web-service/facturaecuador-ws/facturaecuador-ws.iml" filepath="$PROJECT_DIR$/common/web-service/facturaecuador-ws/facturaecuador-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/persistence/persistence.iml" filepath="$PROJECT_DIR$/common/persistence/persistence.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/persistence/persistence-fe/persistence-fe.iml" filepath="$PROJECT_DIR$/common/persistence/persistence-fe/persistence-fe.iml" />
       <module fileurl="file://$PROJECT_DIR$/portal/portal.iml" filepath="$PROJECT_DIR$/portal/portal.iml" />
       <module fileurl="file://$PROJECT_DIR$/portal/portalfactura/portalfactura.iml" filepath="$PROJECT_DIR$/portal/portalfactura/portalfactura.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/utils/security-fe/security-fe.iml" filepath="$PROJECT_DIR$/common/utils/security-fe/security-fe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/sri-autorizacion-offline.iml" filepath="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/sri-autorizacion-offline.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/utils/utils.iml" filepath="$PROJECT_DIR$/common/utils/utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/web-service/web-service.iml" filepath="$PROJECT_DIR$/common/web-service/web-service.iml" />
     </modules>
   </component>
 </project>

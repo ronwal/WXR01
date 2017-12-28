@@ -16,6 +16,7 @@
     <modules>
         <module>portalfactura</module>
         <module>XMLExplore</module>
+        <module>docu-send</module>
     </modules>
 
 </project>

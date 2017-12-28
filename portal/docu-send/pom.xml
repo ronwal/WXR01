@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>portal</artifactId>
+        <groupId>ec.com.facturaecuador</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>docu-send</artifactId>
+    <packaging>jar</packaging>
+    <name>FEcuador :: PortalFactura :: DocuSend</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <!--jUnit Test-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-bundle-minimal -->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-bundle-minimal</artifactId>
+            <version>2.7.18</version>
+        </dependency>
+
+
+        <!--jaxws-rt-->
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+            <version>2.2.5</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--commons-codec-->
+        <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.11</version>
+        </dependency>
+
+        <!--sri-1.4.1-->
+        <!-- Install: mvn install:install-file -Dfile=common/files/sri.jar -DgroupId=ec.gob.sri -DartifactId=sri-1.4.1 -Dversion=1.4.1 -Dpackaging=jar-->
+        <dependency>
+            <groupId>ec.gob.sri</groupId>
+            <artifactId>sri-1.4.1</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+
+        <!--BackupAssistantSharedLib-->
+        <!-- Install: mvn install:install-file -Dfile=common/files/BackupAssistantSharedLib.jar -DgroupId=ec.ste.backup.shared -DartifactId=BackupAssistantSharedLib -Dversion=1.0 -Dpackaging=jar-->
+        <dependency>
+            <groupId>ec.ste.backup.shared</groupId>
+            <artifactId>BackupAssistantSharedLib</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!--FEcuador Modules-->
+        <!--sri-autorizacion-offline-->
+        <dependency>
+            <groupId>ec.com.facturaecuador</groupId>
+            <artifactId>sri-autorizacion-offline</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>docusend</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>ec.ste.docusend.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+
+</project>

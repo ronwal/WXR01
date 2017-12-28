@@ -17,22 +17,29 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-fe" />
+        <module name="docu-send" />
+        <module name="facturaecuador-ws" />
         <module name="persistence-fe" />
         <module name="portalfactura" />
         <module name="security-fe" />
+        <module name="sri-autorizacion-offline" />
         <module name="XMLExplore" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.5" />
       <module name="config-fe" target="1.5" />
+      <module name="docu-send" target="1.8" />
       <module name="facturaecuador" target="1.5" />
+      <module name="facturaecuador-ws" target="1.8" />
       <module name="persistence" target="1.5" />
       <module name="persistence-fe" target="1.8" />
       <module name="portal" target="1.5" />
       <module name="portalfactura" target="1.8" />
       <module name="security-fe" target="1.5" />
+      <module name="sri-autorizacion-offline" target="1.8" />
       <module name="utils" target="1.5" />
+      <module name="web-service" target="1.5" />
       <module name="XMLExplore" target="1.5" />
     </bytecodeTargetLevel>
   </component>

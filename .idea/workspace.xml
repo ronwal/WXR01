@@ -2,60 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b32bde03-e160-4be4-bc5b-62d708de012f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/portalfactura_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/portalfactura_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/files/BackupAssistantSharedLib.jar" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/files/sri.jar" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/facturaecuador-ws/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/facturaecuador-ws/src/main/java/ec/gob/fecuador/ws/cliente/wsloader/WSLoaderWS.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/facturaecuador-ws/src/main/java/ec/gob/fecuador/ws/cliente/wsloader/operation/WSLoaderWSOp.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/facturaecuador-ws/src/main/resources/wsdl/WSLoader.wsdl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/facturaecuador-ws/src/main/resources/wsdl/WSLoaderSchema.wsdl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/java/ec/gob/fecuador/ws/cliente/aut/offline/AutorizacionOfflineWS.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/java/ec/gob/fecuador/ws/cliente/aut/offline/operation/AutorizacionOfflineWSOp.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/resources/log4j.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/resources/wsdl/ws_AutorizacionComprobantesOffline.wsdl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/test/java/ec/gob/fecuador/ws/cliente/aut/offline/test/AutorizacionOfflineTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/config.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/BackupThread.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/BackupTray.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/ConfigurationFrame.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/ConfigurationManager.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/ConfigurationReader.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/DaemonThread.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/LoginDialog.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/Main.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/bean/Autorizacion.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/utill/FileUtil.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/DocumentLoader.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/DocumentLoaderResponse.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/Login.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/LoginResponse.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/ObjectFactory.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/WSLoader.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/WSLoader_Service.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/package-info.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/DatabaseEntity.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/DocumentoAutorizado.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/FECDocumento.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/FECParser.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/LectorComprobante.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/ParserBase.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/ParserManager.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/XML2Java.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/resources/config.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/resources/icons/tray.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/portal/docu-send/src/main/resources/log4j.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/common/common.iml" afterPath="$PROJECT_DIR$/common/common.iml" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/pom.xml" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/AuditoriaDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/AuditoriaDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/DetalleAuditoriaDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/DetalleAuditoriaDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/DetalleRetencionDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/DetalleRetencionDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/EmpresaDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/EmpresaDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/FacturaDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/FacturaDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/GuiaRemisionDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/GuiaRemisionDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/NotaCreditoDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/NotaCreditoDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/NotaDebitoDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/NotaDebitoDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/PerfilDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/PerfilDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/RetencionDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/RetencionDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/TipoDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/TipoDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/UsuarioDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/UsuarioDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/AuditoriaDAOImpl.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/AuditoriaDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/DetalleAuditoriaDAOImpl.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/DetalleAuditoriaDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/DetalleRetencionDAOImpl.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/DetalleRetencionDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/FacturaDAOImpl.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/FacturaDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/NotaCreditoDAOImpl.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/NotaCreditoDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/NotaDebitoDAOImpl.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/NotaDebitoDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/PerfilDAOImpl.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/PerfilDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/RetencionDAOImpl.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/RetencionDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/UsuarioDAOImpl.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/UsuarioDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/common/impl/GenericDAOImpl.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/common/impl/GenericDAOImpl.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/operation/FacElectOpDAO.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/operation/FacElectOpDAO.java" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/META-INF/persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/context-persitencia.xml" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/context-persitencia.xml" />
-      <change beforePath="$PROJECT_DIR$/common/persistence/persistence-fe/src/test/java/ec/fecuador/persistence/test/FacturaDAOTest.java" afterPath="$PROJECT_DIR$/common/persistence/persistence-fe/src/test/java/ec/fecuador/persistence/test/FacturaDAOTest.java" />
-      <change beforePath="$PROJECT_DIR$/common/utils/config-fe/src/main/java/ec/gob/fecuador/config/properties/ConfigProp.java" afterPath="$PROJECT_DIR$/common/utils/config-fe/src/main/java/ec/gob/fecuador/config/properties/ConfigProp.java" />
-      <change beforePath="$PROJECT_DIR$/facturaecuador.iml" afterPath="$PROJECT_DIR$/facturaecuador.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/portal/XMLExplore/XMLExplore.iml" afterPath="$PROJECT_DIR$/portal/XMLExplore/XMLExplore.iml" />
-      <change beforePath="$PROJECT_DIR$/portal/portal.iml" afterPath="$PROJECT_DIR$/portal/portal.iml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/pom.xml" afterPath="$PROJECT_DIR$/portal/portalfactura/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/portalfactura.iml" afterPath="$PROJECT_DIR$/portal/portalfactura/portalfactura.iml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/controller/login/LoginController.java" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/controller/login/LoginController.java" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/resources/config/context-base.xml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/resources/config/context-base.xml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/resources/log4j.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/WEB-INF/faces-config.xml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/WEB-INF/jboss-deployment-structure.xml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/WEB-INF/jboss-deployment-structure.xml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/index.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/index.xhtml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/contactos.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/contactos.xhtml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/factura.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/factura.xhtml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/index_.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/index_.xhtml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/productos.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/productos.xhtml" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" afterPath="$PROJECT_DIR$/common/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/portal/pom.xml" afterPath="$PROJECT_DIR$/portal/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/templates/template.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/templates/template.xhtml" />
+      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/carga.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/carga.xhtml" />
+      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/documentos.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/documentos.xhtml" />
+      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/index.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/index.xhtml" />
+      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/usuarios.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/usuarios.xhtml" />
       <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/quienes.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/quienes.xhtml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/templates/pie.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/templates/pie.xhtml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/templates/template.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/templates/template.xhtml" />
-      <change beforePath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/templates/template_login.xhtml" afterPath="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/templates/template_login.xhtml" />
     </list>
     <ignored path="facturaecuador.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,6 +74,10 @@
     <ignored path="$PROJECT_DIR$/common/utils/target/" />
     <ignored path="$PROJECT_DIR$/common/utils/config-fe/target/" />
     <ignored path="$PROJECT_DIR$/common/utils/security-fe/target/" />
+    <ignored path="$PROJECT_DIR$/common/web-service/target/" />
+    <ignored path="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/" />
+    <ignored path="$PROJECT_DIR$/portal/docu-send/target/" />
+    <ignored path="$PROJECT_DIR$/common/web-service/facturaecuador-ws/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,166 +100,50 @@
     <favorites_list name="facturaecuador" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PerfilDAOImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/PerfilDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portal/portalfactura/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1640">
-              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FacElectOpDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/operation/impl/FacElectOpDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
-              <folding>
-                <element signature="e#7118#7119#0" expanded="true" />
-                <element signature="method#setDetalleAuditoriaDAO#0;class#FacElectOpDAOImpl#0" expanded="false" />
-                <element signature="method#setDetalleRetencionDAO#0;class#FacElectOpDAOImpl#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/controller/login/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1775">
-              <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="10" />
-              <folding>
-                <element signature="e#5896#5897#0" expanded="true" />
-                <element signature="e#5926#5927#0" expanded="true" />
-                <element signature="e#5977#5978#0" expanded="true" />
-                <element signature="e#6015#6016#0" expanded="true" />
-                <element signature="e#6048#6049#0" expanded="true" />
-                <element signature="e#6080#6081#0" expanded="true" />
-                <element signature="e#6127#6128#0" expanded="true" />
-                <element signature="e#6169#6170#0" expanded="true" />
-                <element signature="e#6200#6201#0" expanded="true" />
-                <element signature="e#6227#6228#0" expanded="true" />
-                <element signature="e#6267#6268#0" expanded="true" />
-                <element signature="e#6299#6300#0" expanded="true" />
-                <element signature="e#6334#6335#0" expanded="true" />
-                <element signature="e#6365#6366#0" expanded="true" />
-                <element signature="e#6413#6414#0" expanded="true" />
-                <element signature="e#6453#6454#0" expanded="true" />
-                <element signature="e#6486#6487#0" expanded="true" />
-                <element signature="e#6515#6516#0" expanded="true" />
-                <element signature="e#6559#6560#0" expanded="true" />
-                <element signature="e#6595#6596#0" expanded="true" />
-                <element signature="e#6635#6636#0" expanded="true" />
-                <element signature="e#6664#6665#0" expanded="true" />
-                <element signature="e#6715#6716#0" expanded="true" />
-                <element signature="e#6751#6752#0" expanded="true" />
-                <element signature="e#6816#6817#0" expanded="true" />
-                <element signature="e#6866#6867#0" expanded="true" />
-                <element signature="e#6900#6901#0" expanded="true" />
-                <element signature="e#6930#6931#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsuarioController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/controller/empresa/UsuarioController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="60" column="75" lean-forward="false" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="context-persitencia.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/context-persitencia.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="85" column="4" lean-forward="false" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
-              <folding>
-                <element signature="e#1786#1811#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/persistence/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="XHTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;p:outputLabel&gt;*&lt;/p:outputLabel&gt;</find>
-      <find>pro</find>
-      <find>util</find>
-      <find>ui-panelgrid\\</find>
-      <find>first</find>
-      <find>getAllU</find>
-      <find>:form:carDetail</find>
-      <find>perfilby</find>
-      <find>Usuar</find>
-      <find>UnsupportedOperationException</find>
-      <find>perfilByPrfCodigo</find>
-      <find>userEditWgt</find>
-      <find>carDetail</find>
-      <find>Usuario</find>
-      <find>show()</find>
-      <find>userEdit</find>
-      <find>process=&quot;@this&quot;</find>
-      <find>Function</find>
-      <find>40-</find>
-      <find>converter</find>
-      <find>perfilConverter</find>
-      <find>converter=</find>
-      <find>posr</find>
-      <find>com</find>
-      <find>jdk</find>
-      <find>ConnectionDriverName</find>
-      <find>getPerfilByCodPrf</find>
-      <find>transaction-manager</find>
-      <find>facElectOpDAO</find>
       <find>public</find>
+      <find>Iniciar S</find>
+      <find>&lt;/xs:sequence&gt;</find>
+      <find>http://ec.gob.sri.ws.autorizacion</find>
+      <find>autorizacion&quot;</find>
+      <find>tns</find>
+      <find>autorizacionComprobante</find>
+      <find>AutorizacionComprobantesOffline</find>
+      <find>URI</find>
+      <find>url</find>
+      <find>@XmlRoot</find>
+      <find>getEventHandler()</find>
+      <find>Qname</find>
+      <find>qName</find>
+      <find>ValidarComprobante_Q</find>
+      <find>fault</find>
+      <find>autorizaciones</find>
+      <find>claveAccesoConsultada</find>
+      <find>numeroComprobantes</find>
+      <find>autorizacionComprobanteResponse</find>
+      <find>RespuestaAutorizacion</find>
+      <find>mensaje</find>
+      <find>autorizacion</find>
+      <find>respald</find>
+      <find>miBackupNow</find>
+      <find>\/\*[az 0-9]+\*\/</find>
+      <find>extraerDocumento</find>
+      <find>respuestaComprobante</find>
+      <find>WSLoader_Service</find>
+      <find>definitions</find>
     </findStrings>
     <replaceStrings>
       <replace>property name=</replace>
@@ -269,6 +160,9 @@
       <replace>gob</replace>
       <replace>-</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/common/web-service/sri-autorizacion-offline</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -312,36 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/style/css/main.css" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/controller/empresa/DocumentosController.java" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/documentos/facturas.xhtml" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/model/lazy/DataUserLazy.java" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/usuarios.xhtml" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/test/java/ec/fecuador/persistence/test/Security.java" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/model/converter/EmpresaConverter.java" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/common/impl/GenericDAOImpl.java" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/templates/template.xhtml" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/contactos.xhtml" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/factura.xhtml" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/index_.xhtml" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/productos.xhtml" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/quienes.xhtml" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/index.xhtml" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/jdbc-persist.properties" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/WEB-INF/faces-config.xml" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/common/utils/config-fe/src/main/java/ec/gob/fecuador/config/properties/ConfigProp.java" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/operation/FacElectOpDAO.java" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/DetalleAuditoriaDAO.java" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/AuditoriaDAO.java" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/DetalleRetencionDAO.java" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/EmpresaDAO.java" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/FacturaDAO.java" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/GuiaRemisionDAO.java" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/NotaCreditoDAO.java" />
-        <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/NotaDebitoDAO.java" />
         <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/PerfilDAO.java" />
         <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/RetencionDAO.java" />
         <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/TipoDAO.java" />
@@ -361,8 +225,38 @@
         <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/context-persitencia.xml" />
         <option value="$PROJECT_DIR$/portal/portalfactura/pom.xml" />
         <option value="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/controller/login/LoginController.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/controller/login/LoginController.java" />
+        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/index.xhtml" />
+        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/usuarios.xhtml" />
+        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/documentos.xhtml" />
+        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa/carga.xhtml" />
+        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/public/quienes.xhtml" />
+        <option value="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/templates/template.xhtml" />
+        <option value="$PROJECT_DIR$/common/web-service/pom.xml" />
+        <option value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/generated-sources/cxf/ec/gob/sri/ws/offline/autorizacion/AutorizacionComprobantesOffline.java" />
+        <option value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/resources/wsdl/ws_AutorizacionComprobantes.wsdl" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/generated-sources/cxf/ec/gob/sri/ws/offline/autorizacion/Autorizacion.java" />
+        <option value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/generated-sources/cxf/ec/gob/sri/ws/offline/autorizacion/ObjectFactory.java" />
+        <option value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/java/ec/gob/fecuador/ws/cliente/aut/offline/AutorizacionOfflineWS.java" />
+        <option value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/java/ec/gob/fecuador/ws/cliente/aut/offline/operation/AutorizacionOfflineWSOp.java" />
+        <option value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/test/java/ec/gob/fecuador/ws/cliente/aut/offline/test/AutorizacionOfflineTest.java" />
+        <option value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/resources/wsdl/ws_AutorizacionComprobantesOffline.wsdl" />
+        <option value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/pom.xml" />
+        <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/ParserManager.java" />
+        <option value="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/LectorComprobante.java" />
+        <option value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/generated-sources/cxf/ec/gob/sri/ws/autorizacion/offline/Autorizacion.java" />
+        <option value="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/bean/Autorizacion.java" />
+        <option value="$PROJECT_DIR$/portal/docu-send/src/main/resources/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/portal/docu-send/src/main/resources/log4j.xml" />
+        <option value="$PROJECT_DIR$/common/web-service/facturaecuador-ws/src/main/resources/wsdl/WSLoaderSchema.wsdl" />
+        <option value="$PROJECT_DIR$/common/web-service/facturaecuador-ws/pom.xml" />
+        <option value="$PROJECT_DIR$/common/web-service/facturaecuador-ws/src/main/java/ec/gob/fecuador/ws/cliente/wsloader/operation/WSLoaderWSOp.java" />
+        <option value="$PROJECT_DIR$/common/web-service/facturaecuador-ws/src/main/resources/wsdl/WSLoader.wsdl" />
+        <option value="$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/BackupThread.java" />
+        <option value="$PROJECT_DIR$/portal/docu-send/pom.xml" />
       </list>
     </option>
   </component>
@@ -384,12 +278,7 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="FacturaEcuador :: Parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="FacturaEcuador :: Parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Run Configurations" type="21c1f71a:MavenProjectsStructure$RunConfigurationsNode" />
+          <item name="FacturaEcuador :: COMMON :: WEBSERVICE-CLIENT :: FEcuador-WS" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
       </expand>
       <select />
@@ -417,9 +306,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -436,164 +323,27 @@
             <path>
               <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
               <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence-fe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence-fe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence-fe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence-fe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence-fe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
               <item name="portal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
               <item name="WXR01" type="462c0819:PsiDirectoryNode" />
               <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portalfactura" type="462c0819:PsiDirectoryNode" />
+              <item name="docu-send" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
               <item name="WXR01" type="462c0819:PsiDirectoryNode" />
               <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portalfactura" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portalfactura" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portalfactura" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portalfactura" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portalfactura" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portalfactura" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portalfactura" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portalfactura" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portalfactura" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturaecuador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WXR01" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portalfactura" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="docu-send" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -619,6 +369,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="SearchEverywhereHistoryKey" value="LoginController&#9;FILE&#9;file:///Users/Walter/Desarrollo/Proyectos/FacturaEcuador/WXR01/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/controller/login/LoginController.java" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -638,18 +389,18 @@
       <recent name="ec.fecuador.persistence.factecuador.data.entities" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ec.gob.fecuador.ws.cliente.wsloader.operation" />
+      <recent name="ec.gob.fecuador.ws.cliente.aut.offline.operation" />
       <recent name="ec.gob.fecuador.portal.controller.empresa" />
       <recent name="ec.gob.fecuador.portal.model.converter" />
       <recent name="ec.gob.fecuador.config.enumerate" />
-      <recent name="ec.gob.fecuador.config.properties" />
-      <recent name="ec.fecuador.persistence.factecuador.generic.operation.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/WEB-INF" />
-      <recent name="$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources" />
-      <recent name="$PROJECT_DIR$/common/persistence/persistence-fe/src/test/java/ec/fecuador/persistence/test" />
-      <recent name="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/style/images" />
-      <recent name="$PROJECT_DIR$/portal/portalfactura/src/main/webapp/views/empresa" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/portal/docu-send/src/main/resources" />
+      <recent name="$PROJECT_DIR$/portal/docu-send/src/main/java" />
+      <recent name="$PROJECT_DIR$/portal/docu-send/src/main/resources/icons" />
+      <recent name="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/resources/wsdl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -664,12 +415,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Remote.jBossRemote">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ec.ste.docusend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="ec.ste.docusend.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="docu-send" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -693,6 +463,31 @@
       <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    </configuration>
+    <configuration name="AutorizacionOfflineTest.testDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ec.gob.fecuador.ws.cliente.aut.offline.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="sri-autorizacion-offline" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ec.gob.fecuador.ws.cliente.aut.offline.test" />
+      <option name="MAIN_CLASS_NAME" value="ec.gob.fecuador.ws.cliente.aut.offline.test.AutorizacionOfflineTest" />
+      <option name="METHOD_NAME" value="testDocument" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration name="FacturaDAOTest.getMenuPerfil" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -801,6 +596,55 @@
       <module name="XMLExplore" />
       <envs />
     </configuration>
+    <configuration name="docu-send [assembly]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="assembly:single" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/portal/docu-send" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration name="docu-send [clean]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/portal/docu-send" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
     <configuration name="facturaecuador [clean]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -845,6 +689,55 @@
             </option>
             <option name="resolveToWorkspace" value="false" />
             <option name="workingDirPath" value="$PROJECT_DIR$/portal/portalfactura" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration name="sri-autorizacion-offline [clean]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration name="sri-autorizacion-offline assembly" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="assembly:single" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/common/web-service/sri-autorizacion-offline" />
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
@@ -1212,19 +1105,27 @@
       <arguments />
       <envs />
     </configuration>
-    <list size="6">
+    <list size="12">
       <item index="0" class="java.lang.String" itemvalue="Maven.facturaecuador [clean]" />
       <item index="1" class="java.lang.String" itemvalue="Maven.portalfactura [clean]" />
-      <item index="2" class="java.lang.String" itemvalue="Remote.jBossRemote" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.testDecript" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.testFactura" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.getMenuPerfil" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.sri-autorizacion-offline [clean]" />
+      <item index="3" class="java.lang.String" itemvalue="Maven.sri-autorizacion-offline assembly" />
+      <item index="4" class="java.lang.String" itemvalue="Maven.docu-send [clean]" />
+      <item index="5" class="java.lang.String" itemvalue="Maven.docu-send [assembly]" />
+      <item index="6" class="java.lang.String" itemvalue="Remote.jBossRemote" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.testDecript" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.testFactura" />
+      <item index="9" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.getMenuPerfil" />
+      <item index="10" class="java.lang.String" itemvalue="JUnit.AutorizacionOfflineTest.testDocument" />
+      <item index="11" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.getMenuPerfil" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.testFactura" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.testDecript" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.AutorizacionOfflineTest.testDocument" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.getMenuPerfil" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.testFactura" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FacturaDAOTest.testDecript" />
       </list>
     </recent_temporary>
   </component>
@@ -1267,7 +1168,17 @@
       <workItem from="1512458519405" duration="1110000" />
       <workItem from="1512660027755" duration="10000" />
       <workItem from="1512663176935" duration="57000" />
-      <workItem from="1512828404718" duration="8982000" />
+      <workItem from="1512828404718" duration="12131000" />
+      <workItem from="1513038031767" duration="7209000" />
+      <workItem from="1513132281547" duration="2589000" />
+      <workItem from="1513171584199" duration="2321000" />
+      <workItem from="1513177487194" duration="7199000" />
+      <workItem from="1513209415853" duration="5873000" />
+      <workItem from="1513228948941" duration="80000" />
+      <workItem from="1513259135194" duration="294000" />
+      <workItem from="1513915916313" duration="11151000" />
+      <workItem from="1513956281094" duration="15000" />
+      <workItem from="1514488901003" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="Re-Estructure proyect">
       <created>1488466181813</created>
@@ -1283,50 +1194,57 @@
       <option name="project" value="LOCAL" />
       <updated>1489882944433</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Re-Estructure proyect">
+      <created>1512912477877</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1512912477877</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FacturaDAOTest_getMenuPerfil - 2017.12.09 at 21h 16m 51s.xml">
-      <configuration name="FacturaDAOTest.getMenuPerfil" configurationId="JUnit" />
+    <history-entry file="AutorizacionOfflineTest_testDocument - 2017.12.13 at 12h 18m 14s.xml">
+      <configuration name="AutorizacionOfflineTest.testDocument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FacturaDAOTest_getMenuPerfil - 2017.12.09 at 21h 18m 14s.xml">
-      <configuration name="FacturaDAOTest.getMenuPerfil" configurationId="JUnit" />
+    <history-entry file="AutorizacionOfflineTest_testDocument - 2017.12.13 at 14h 13m 48s.xml">
+      <configuration name="AutorizacionOfflineTest.testDocument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FacturaDAOTest_getMenuPerfil - 2017.12.09 at 21h 22m 30s.xml">
-      <configuration name="FacturaDAOTest.getMenuPerfil" configurationId="JUnit" />
+    <history-entry file="AutorizacionOfflineTest_testDocument - 2017.12.13 at 14h 14m 25s.xml">
+      <configuration name="AutorizacionOfflineTest.testDocument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FacturaDAOTest_getMenuPerfil - 2017.12.09 at 21h 23m 36s.xml">
-      <configuration name="FacturaDAOTest.getMenuPerfil" configurationId="JUnit" />
+    <history-entry file="AutorizacionOfflineTest_testDocument - 2017.12.13 at 14h 15m 08s.xml">
+      <configuration name="AutorizacionOfflineTest.testDocument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FacturaDAOTest_testFactura - 2017.11.03 at 10h 32m 31s.xml">
-      <configuration name="FacturaDAOTest.testFactura" configurationId="JUnit" />
+    <history-entry file="AutorizacionOfflineTest_testDocument - 2017.12.13 at 14h 17m 11s.xml">
+      <configuration name="AutorizacionOfflineTest.testDocument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FacturaDAOTest_testFactura - 2017.11.03 at 10h 32m 43s.xml">
-      <configuration name="FacturaDAOTest.testFactura" configurationId="JUnit" />
+    <history-entry file="AutorizacionOfflineTest_testDocument - 2017.12.13 at 14h 17m 52s.xml">
+      <configuration name="AutorizacionOfflineTest.testDocument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FacturaDAOTest_testFactura - 2017.11.03 at 10h 33m 46s.xml">
-      <configuration name="FacturaDAOTest.testFactura" configurationId="JUnit" />
+    <history-entry file="AutorizacionOfflineTest_testDocument - 2017.12.13 at 19h 18m 01s.xml">
+      <configuration name="AutorizacionOfflineTest.testDocument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FacturaDAOTest_testFactura - 2017.11.03 at 10h 36m 59s.xml">
-      <configuration name="FacturaDAOTest.testFactura" configurationId="JUnit" />
+    <history-entry file="AutorizacionOfflineTest_testDocument - 2017.12.13 at 20h 02m 50s.xml">
+      <configuration name="AutorizacionOfflineTest.testDocument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FacturaDAOTest_testFactura - 2017.11.03 at 10h 37m 26s.xml">
-      <configuration name="FacturaDAOTest.testFactura" configurationId="JUnit" />
+    <history-entry file="AutorizacionOfflineTest_testDocument - 2017.12.13 at 20h 03m 14s.xml">
+      <configuration name="AutorizacionOfflineTest.testDocument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FacturaDAOTest_testFactura - 2017.11.03 at 10h 44m 07s.xml">
-      <configuration name="FacturaDAOTest.testFactura" configurationId="JUnit" />
+    <history-entry file="AutorizacionOfflineTest_testDocument - 2017.12.13 at 20h 06m 00s.xml">
+      <configuration name="AutorizacionOfflineTest.testDocument" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233682000" />
+    <option name="totallyTimeSpent" value="273581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29874215" sideWeight="0.502442" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.113553114" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2798742" sideWeight="0.507326" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13614164" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18901454" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1334,23 +1252,21 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2798742" sideWeight="0.497558" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2798742" sideWeight="0.492674" order="3" side_tool="false" content_ui="tabs" x="21" y="391" width="1638" height="267" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32809225" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20125785" sideWeight="0.497558" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4056604" sideWeight="0.495116" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6698113" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29350105" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21647818" sideWeight="0.50690335" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24786325" sideWeight="0.4895178" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18864469" sideWeight="0.4895178" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2832723" sideWeight="0.5104822" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3117932" sideWeight="0.50547945" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1360,7 +1276,9 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32809225" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1407,35 +1325,96 @@
           <option name="timeStamp" value="151" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/PerfilDAOImpl.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="153" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/PerfilDAOImpl.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="155" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common/persistence/persistence-fe/src/test/java/ec/fecuador/persistence/test/FacturaDAOTest.java</url>
           <line>41</line>
           <properties />
           <option name="timeStamp" value="159" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/operation/impl/FacElectOpDAOImpl.java</url>
-          <line>237</line>
+          <url>file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/test/java/ec/gob/fecuador/ws/cliente/aut/offline/test/AutorizacionOfflineTest.java</url>
+          <line>17</line>
           <properties />
-          <option name="timeStamp" value="161" />
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/generated-sources/cxf/ec/gob/sri/ws/autorizacion/offline/RespuestaComprobante.java</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="177" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/generated-sources/cxf/ec/gob/sri/ws/autorizacion/offline/RespuestaComprobante.java</url>
+          <line>123</line>
+          <properties />
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/generated-sources/cxf/ec/gob/sri/ws/autorizacion/offline/RespuestaComprobante.java</url>
+          <line>111</line>
+          <properties />
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/ParserManager.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/ParserBase.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/LectorComprobante.java</url>
+          <line>118</line>
+          <properties />
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/LectorComprobante.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/LectorComprobante.java</url>
+          <line>133</line>
+          <properties />
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/LectorComprobante.java</url>
+          <line>123</line>
+          <properties />
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/LectorComprobante.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/BackupThread.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="204" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="162" />
+      <option name="time" value="205" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="query.getResultList()" language="JAVA" />
+        <watch expression="getPortType()" language="JAVA" />
+        <watch expression="getPortType().autorizacionComprobante(claveAcceso)" language="JAVA" />
+        <watch expression="getEventHandler()" language="JAVA" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="node_.getNodeName().equals(&quot;claveAcceso&quot;)" language="JAVA" />
+        <watch expression="node_.getNodeName()" language="JAVA" />
+        <watch expression="node_.getFirstChild().getNodeValue()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -1443,453 +1422,399 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>node_.getFirstChild().getNodeValue()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>node_</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>node_.getNodeName()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>node_.getNodeName().equals(&quot;claveAcceso&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>nodeList.item(j).getNodeName()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>nodeList.item(j)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>element.getAttributes()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>element.getChildNodes().item(j)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>element.getChildNodes()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>element.getAttributeNode(&quot;claveAcceso&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/portal/portalfactura/src/main/webapp/WEB-INF/faces-config.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-simple/3.1.8/cxf-rt-frontend-simple-3.1.8-sources.jar!/org/apache/cxf/frontend/ClientProxyFactoryBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="77" lean-forward="false" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/portalfactura/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding />
+        <state relative-caret-position="220">
+          <caret line="270" column="37" lean-forward="false" selection-start-line="270" selection-start-column="32" selection-end-line="270" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/utils/config-fe/src/main/resources/config.properties">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/src.zip!/javax/xml/namespace/QName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="2055">
+          <caret line="295" column="11" lean-forward="false" selection-start-line="295" selection-start-column="11" selection-end-line="295" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/utils/config-fe/src/main/java/ec/gob/fecuador/config/enumerate/ConfigEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/utils/config-fe/src/main/java/ec/gob/fecuador/config/properties/ConfigProp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/DetalleAuditoriaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/AuditoriaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/NotaCreditoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/NotaDebitoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/UsuarioDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/TipoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/RetencionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/GuiaRemisionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/FacturaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="47" column="4" lean-forward="false" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/EmpresaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/DetalleRetencionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/AuditoriaDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="e#817#818#0" expanded="false" />
-            <element signature="e#851#852#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/DetalleAuditoriaDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/DetalleRetencionDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/EmpresaDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/FacturaDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3120">
-          <caret line="225" column="13" lean-forward="false" selection-start-line="225" selection-start-column="13" selection-end-line="225" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/GuiaRemisionDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/NotaCreditoDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/NotaDebitoDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/common/impl/GenericDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="299" column="51" lean-forward="false" selection-start-line="299" selection-start-column="51" selection-end-line="299" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/util/FilterUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/UsuarioDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/TipoDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/RetencionDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/jdbc-persist.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/entities/PerfilEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/entities/MenuSystemEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/entities/DetalleMenuSystemEntity.java">
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/classes/ec/gob/sri/ws/offline/autorizacion/AutorizacionComprobantesOfflineService.class" />
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/classes/ec/gob/sri/ws/offline/autorizacion/AutorizacionComprobantesOffline.class" />
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/generated-sources/cxf/ec/gob/sri/ws/offline/autorizacion/ObjectFactory.java" />
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/classes/ec/gob/sri/ws/autorizacion/offline/Autorizacion.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/common/GenericDAO.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/src.zip!/javax/xml/bind/annotation/XmlElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="462">
+          <caret line="140" column="18" lean-forward="false" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="59" lean-forward="false" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/PerfilDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/common/AbstractJPADao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/operation/FacElectOpDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1250">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/portalfactura/src/main/resources/config/context-base.xml">
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/classes/ec/gob/sri/ws/autorizacion/offline/package-info.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding />
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/test/java/ec/fecuador/persistence/test/FacturaDAOTest.java">
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/generated-sources/cxf/ec/gob/sri/ws/autorizacion/offline/AutorizacionComprobantesOffline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="46" column="37" lean-forward="false" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="242">
+          <caret line="24" column="67" lean-forward="false" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/portal/portalfactura/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1640">
-          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="235">
+          <caret line="146" column="45" lean-forward="true" selection-start-line="146" selection-start-column="8" selection-end-line="146" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/resources/log4j.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-databinding-jaxb/3.1.8/cxf-rt-databinding-jaxb-3.1.8-sources.jar!/org/apache/cxf/jaxb/JAXBEncoderDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="854" column="0" lean-forward="false" selection-start-line="854" selection-start-column="0" selection-end-line="854" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/classes/ec/gob/sri/ws/autorizacion/offline/RespuestaComprobante.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/test/java/ec/gob/fecuador/ws/cliente/aut/offline/test/AutorizacionOfflineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/web/jbossweb/7.0.16.Final/jbossweb-7.0.16.Final.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/resources/wsdl/ws_AutorizacionComprobantesOffline.wsdl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="85" column="122" lean-forward="false" selection-start-line="85" selection-start-column="122" selection-end-line="85" selection-end-column="122" />
+        <state relative-caret-position="430">
+          <caret line="139" column="19" lean-forward="false" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="52" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="13" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/context-persitencia.xml">
+    <entry file="file://$PROJECT_DIR$/common/utils/security-fe/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="85" column="4" lean-forward="false" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+        <state relative-caret-position="300">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/ConfigurationFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="194" column="43" lean-forward="true" selection-start-line="194" selection-start-column="43" selection-end-line="194" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ec/ste/backup/shared/BackupAssistantSharedLib/1.0/BackupAssistantSharedLib-1.0.jar!/ec/ste/backup/shared/crypt/Crypt.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/src.zip!/java/awt/MenuItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="280" column="29" lean-forward="false" selection-start-line="280" selection-start-column="29" selection-end-line="280" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar!/org/apache/log4j/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/FECDocumento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="68" column="16" lean-forward="false" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/src.zip!/org/w3c/dom/NodeList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="61" column="15" lean-forward="false" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/ParserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/ConfigurationReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/generated-sources/cxf/ec/gob/sri/ws/autorizacion/offline/RespuestaComprobante.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="151" column="32" lean-forward="false" selection-start-line="151" selection-start-column="32" selection-end-line="151" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/LectorComprobante.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="101" column="38" lean-forward="false" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
           <folding>
-            <element signature="e#1786#1811#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/pom.xml">
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/factura/xml/ParserBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" column="83" lean-forward="false" selection-start-line="22" selection-start-column="83" selection-end-line="22" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/target/generated-sources/cxf/ec/gob/sri/ws/autorizacion/offline/Autorizacion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="49" column="15" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/resources/META-INF/MANIFEST.MF" />
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/resources/log4j.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/BackupTray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="95" column="29" lean-forward="false" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="76" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/bean/Autorizacion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="190" column="5" lean-forward="false" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/resources/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="80" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="96" column="12" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="96" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/facturaecuador-ws/src/main/resources/wsdl/WSLoaderSchema.wsdl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/facturaecuador-ws/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="94" column="21" lean-forward="false" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/java/ec/gob/fecuador/ws/cliente/aut/offline/AutorizacionOfflineWS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="46" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/facturaecuador-ws/src/main/resources/wsdl/WSLoader.wsdl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline/src/main/java/ec/gob/fecuador/ws/cliente/aut/offline/operation/AutorizacionOfflineWSOp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="72" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="17" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/facturaecuador-ws/src/main/java/ec/gob/fecuador/ws/cliente/wsloader/operation/WSLoaderWSOp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/web-service/facturaecuador-ws/src/main/java/ec/gob/fecuador/ws/cliente/wsloader/WSLoaderWS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/ObjectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/dependency-reduced-pom.xml" />
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/WSLoader_Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="36" column="11" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/BackupThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="45" column="17" lean-forward="false" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/resources/META-INF/persistence.xml">
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/src/main/java/ec/ste/docusend/wsc/WSLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="120">
+          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/controller/empresa/UsuarioController.java">
+    <entry file="file://$PROJECT_DIR$/portal/docu-send/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="60" column="75" lean-forward="false" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/portalfactura/src/main/java/ec/gob/fecuador/portal/controller/login/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1775">
-          <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="10" />
+        <state relative-caret-position="390">
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
           <folding>
-            <element signature="e#5896#5897#0" expanded="true" />
-            <element signature="e#5926#5927#0" expanded="true" />
-            <element signature="e#5977#5978#0" expanded="true" />
-            <element signature="e#6015#6016#0" expanded="true" />
-            <element signature="e#6048#6049#0" expanded="true" />
-            <element signature="e#6080#6081#0" expanded="true" />
-            <element signature="e#6127#6128#0" expanded="true" />
-            <element signature="e#6169#6170#0" expanded="true" />
-            <element signature="e#6200#6201#0" expanded="true" />
-            <element signature="e#6227#6228#0" expanded="true" />
-            <element signature="e#6267#6268#0" expanded="true" />
-            <element signature="e#6299#6300#0" expanded="true" />
-            <element signature="e#6334#6335#0" expanded="true" />
-            <element signature="e#6365#6366#0" expanded="true" />
-            <element signature="e#6413#6414#0" expanded="true" />
-            <element signature="e#6453#6454#0" expanded="true" />
-            <element signature="e#6486#6487#0" expanded="true" />
-            <element signature="e#6515#6516#0" expanded="true" />
-            <element signature="e#6559#6560#0" expanded="true" />
-            <element signature="e#6595#6596#0" expanded="true" />
-            <element signature="e#6635#6636#0" expanded="true" />
-            <element signature="e#6664#6665#0" expanded="true" />
-            <element signature="e#6715#6716#0" expanded="true" />
-            <element signature="e#6751#6752#0" expanded="true" />
-            <element signature="e#6816#6817#0" expanded="true" />
-            <element signature="e#6866#6867#0" expanded="true" />
-            <element signature="e#6900#6901#0" expanded="true" />
-            <element signature="e#6930#6931#0" expanded="true" />
+            <element signature="n#dependency#5;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#dependency#6;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/generic/operation/impl/FacElectOpDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
-          <folding>
-            <element signature="e#7118#7119#0" expanded="true" />
-            <element signature="method#setDetalleAuditoriaDAO#0;class#FacElectOpDAOImpl#0" expanded="false" />
-            <element signature="method#setDetalleRetencionDAO#0;class#FacElectOpDAOImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/persistence/persistence-fe/src/main/java/ec/fecuador/persistence/factecuador/data/dao/impl/PerfilDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1947,7 +1872,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>persistence</last-edited>
+          <last-edited>sri-autorizacion-offline</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

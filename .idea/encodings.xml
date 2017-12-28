@@ -8,8 +8,12 @@
     <file url="file://$PROJECT_DIR$/common/utils" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/utils/config-fe" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/utils/security-fe" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/web-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/web-service/facturaecuador-ws" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/web-service/sri-autorizacion-offline" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/portal" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/portal/XMLExplore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/portal/docu-send" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/portal/portalfactura" charset="UTF-8" />
   </component>
 </project>

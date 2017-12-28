@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://load.ws.factura.ste.ec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://load.ws.factura.ste.ec/">
+
+    <xs:element name="documentLoader" type="tns:documentLoader" />
+
+    <xs:element name="documentLoaderResponse" type="tns:documentLoaderResponse" />
+
+    <xs:element name="login" type="tns:login" />
+
+    <xs:element name="loginResponse" type="tns:loginResponse" />
+
+    <xs:complexType name="login">
+        <xs:sequence>
+            <xs:element name="ruc" type="xs:string" minOccurs="0" />
+            <xs:element name="nick" type="xs:string" minOccurs="0" />
+            <xs:element name="password" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="loginResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="documentLoader">
+        <xs:sequence>
+            <xs:element name="rucEmpresa" type="xs:string" minOccurs="0" />
+            <xs:element name="nick" type="xs:string" minOccurs="0" />
+            <xs:element name="clave" type="xs:string" minOccurs="0" />
+            <xs:element name="fileName" type="xs:string" minOccurs="0" />
+            <xs:element name="registerType" type="xs:int" />
+            <xs:element name="xmlData" type="xs:base64Binary" nillable="true" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="documentLoaderResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

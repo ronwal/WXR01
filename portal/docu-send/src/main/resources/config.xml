@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Configuration File</comment>
+<entry key="ec.ste.docusend.service">http://www.facturaecuador.com/WSLoader?wsdl</entry>
+<entry key="ec.ste.docusend.interval">1</entry>
+<entry key="ec.ste.docusend.ruc">0991477365001</entry>
+<entry key="ec.ste.docusend.maxSize">10</entry>
+<entry key="ec.ste.docusend.received.dir">AUTORIZADO</entry>
+<entry key="ec.ste.docusend.path">/data/ftp/SACIANEX/0991477365001</entry>
+<entry key="ec.ste.docusend.nick">cd0991477365001</entry>
+<entry key="ec.ste.docusend.issued.dir">AUTORIZADO</entry>
+<entry key="ec.ste.docusend.password">tRFqKyY42wTdUpefZdi/jQ==</entry>
+</properties>
